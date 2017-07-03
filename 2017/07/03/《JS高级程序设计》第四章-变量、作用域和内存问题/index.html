@@ -17,7 +17,7 @@
 <meta property="og:description" content="&amp;ensp;&amp;ensp;把2016年寒假写的对《JavaScript高级程序设计》的笔记写在博客上，同时回看加修改，同时也更新到简书上。尽量一天一篇一章。">
 <meta property="og:image" content="https://img3.doubanio.com/lpic/s8958650.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/69838a3dgy1fh6p6f02ngj20cd07h3yu.jpg">
-<meta property="og:updated_time" content="2017-07-03T08:08:49.940Z">
+<meta property="og:updated_time" content="2017-07-03T08:28:02.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《JS高级程序设计》第四章 作用域和内存问题">
 <meta name="twitter:description" content="&amp;ensp;&amp;ensp;把2016年寒假写的对《JavaScript高级程序设计》的笔记写在博客上，同时回看加修改，同时也更新到简书上。尽量一天一篇一章。">
@@ -250,8 +250,18 @@ changeColor();</code></pre>以上代码涉及三个执行环境：全局环境�
 <p><div style="border: 1px solid #ccc; padding:10px"><strong>✎添加一个with语句块的知识点</strong><br>当在with语句块中使用方法或者变量时，程序会检查该方法是否是本地函数，变量是否是已定义变量，如果不是，它将检查伪对象（with的参数），看它是否为该对象的方法，属性。如上面例子with语句块中的href，本地无定义，则with语句块会自动加上location.href，所以href实际上为href。这个就是with的功能。with 语句是运行缓慢的代码块，尤其是在已设置了属性值时。大多数情况下，如果可能，最好避免使用它。</div><br><br>在此，with语句接收的是Location对象，因此其变量对象中就包含了location对象的所有属性和方法，而这个变量对象被添加到了作用域链的最前端，buildUrl（）函数中定义了一个变量qs。当在with语句中引用变量href时(实际引用的是location.href)。可以在当前执行环境的变量对象中找到。当引用变量qs时，引用的则是在buildUrl( )中定义的那个变量，而该变量位于函数环境的变量对象中。至于with语句的内部，则定义了一个名为url的变量，因而url就成了函数执行环境的一部分，所以可以作为函数的值被返回。</p>
 <p></p><h4>4.2.2没有块级作用域</h4><p></p>
 <p><div style="border: 1px solid #ccc; padding:10px"><strong>✎添块级作用域</strong><br>任何一对花括号中的语句都属于一个块，在这之中定义的所有变量在代码块之外都是不可见的，我们称之为块级作用域。</div><br><br><span style="color:#F75D5D">作用域有两种，块级作用域和函数作用域</span><br>讲到这就好理解。JS没块级作用域就是说在for循环和if语句块中定义的变量是可见的，可以被外部使用的，但像其他的语言Java,C,C#语言中，在for，if语句中定义的变量在语句执行完毕之后就会被<span style="color:#F75D5D">销毁</span>。但在JavaScript中，if语句中的变量声明会将变量添加到当前执行环境中。注意只是当前执行环境，如果for循环是在一个函数里，则定义的i在函数里是确定的数，在全局环境中仍然是not defined。例子：</p>
-<p><pre><code>if(true){                         for(var i = 0; i&lt;10; i++){<br>     var color = “blue”;               dosomething;<br>}                                 }</code></pre></p>
-<h2 id="alert-color-“blue”-alert-i-10"><a href="#alert-color-“blue”-alert-i-10" class="headerlink" title="alert(color)   //“blue”           alert(i)     //10"></a>alert(color)   //“blue”           alert(i)     //10</h2><p>function add(){<br>for (var i = 0; i<10; 10="" i++)="" {="" dosomething;="" }="" alert(i);="" add();="" <span="" style="color:#F75D5D">全局环境中 i is not defined<br></10;></p>
+<pre><code>if(true){
+var color = "blue";
+}
+alert(color)  //"blue"
+
+for(var i=0; i<0; i++){<br="">
+    dosomething;<br>}
+alert(i)  //10<br>
+</0;></code></pre>
+
+<p><pre><code><br>function add(){<br>for (var i = 0; i<10; i++){<br=""><br>    dosomething;<br>}<br><br>alert(i);     //10<br><br>}<br>add();<br><br>alert(i);     // <span style="color:#F75D5D">全局环境中 i is not defined</span></10;></code></pre></p>
+<p></p>
 <blockquote>
 <p>但是ECMA2015有办法解决没有块级作用域这个问题，就是用 <a href="http://es6.ruanyifeng.com/#docs/let" target="_blank" rel="external">let</a> 或 <a href="http://es6.ruanyifeng.com/#docs/let" target="_blank" rel="external">const</a>代替 var 去声明 i 。这样 i 就只会在for循环中被声明，for循环结束之后就会被销毁。</p>
 </blockquote>
@@ -508,11 +518,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">高程</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color3">高程</a>
               </li>
             
             <div class="clearfix"></div>
