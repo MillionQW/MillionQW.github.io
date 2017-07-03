@@ -6,24 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://millionqw.github.io">
-  <title>第一个hexo博客终于建成 | Million</title>
+  <title>《JS高级程序设计》第四章 作用域和内存问题 | Million</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="折腾了半个下午加半个晚上，终于建成了自己的第一个hexo博客，也是自己的第一个博客ヽ(^･ω･^)丿">
-<meta name="keywords" content="前端,生活">
+  <meta name="description" content="&amp;ensp;&amp;ensp;把2016年寒假写的对《JavaScript高级程序设计》的笔记写在博客上，同时回看加修改，同时也更新到简书上。尽量一天一篇一章。">
+<meta name="keywords" content="前端,高程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一个hexo博客终于建成">
-<meta property="og:url" content="https://millionqw.github.io/2017/07/02/第一个hexo博客终于建成/index.html">
+<meta property="og:title" content="《JS高级程序设计》第四章 作用域和内存问题">
+<meta property="og:url" content="https://millionqw.github.io/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/index.html">
 <meta property="og:site_name" content="Million">
-<meta property="og:description" content="折腾了半个下午加半个晚上，终于建成了自己的第一个hexo博客，也是自己的第一个博客ヽ(^･ω･^)丿">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/69838a3dgy1fh5vfzv835j20n205zmx6.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/69838a3dgy1fh5vnw25lqj20nf077jri.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/69838a3dgy1fh5w9ligfoj208y0cmt8p.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/69838a3dgy1fh5xhycw4vj20hs0hsmzo.jpg">
-<meta property="og:updated_time" content="2017-07-03T03:08:53.566Z">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;把2016年寒假写的对《JavaScript高级程序设计》的笔记写在博客上，同时回看加修改，同时也更新到简书上。尽量一天一篇一章。">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s8958650.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/69838a3dgy1fh6p6f02ngj20cd07h3yu.jpg">
+<meta property="og:updated_time" content="2017-07-03T08:08:49.940Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一个hexo博客终于建成">
-<meta name="twitter:description" content="折腾了半个下午加半个晚上，终于建成了自己的第一个hexo博客，也是自己的第一个博客ヽ(^･ω･^)丿">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/69838a3dgy1fh5vfzv835j20n205zmx6.jpg">
+<meta name="twitter:title" content="《JS高级程序设计》第四章 作用域和内存问题">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;把2016年寒假写的对《JavaScript高级程序设计》的笔记写在博客上，同时回看加修改，同时也更新到简书上。尽量一天一篇一章。">
+<meta name="twitter:image" content="https://img3.doubanio.com/lpic/s8958650.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Million" type="application/atom+xml">
   
@@ -155,72 +153,118 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-第一个hexo博客终于建成" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-《JS高级程序设计》第四章-变量、作用域和内存问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      第一个hexo博客终于建成
+      《JS高级程序设计》第四章 作用域和内存问题
     </h1>
   
 
         
-        <a href="/2017/07/02/第一个hexo博客终于建成/" class="archive-article-date">
-  	<time datetime="2017-07-02T13:20:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
+        <a href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/" class="archive-article-date">
+  	<time datetime="2017-07-03T04:38:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>折腾了半个下午加半个晚上，终于建成了自己的第一个hexo博客，也是自己的第一个博客ヽ(^･ω･^)丿
-</code></pre>  <a id="more"></a>
-<p>  从开始接触技术以来，就一直知道技术人员都要有一个自己的博客，接触了两年技术，学习过程中也有把知识记录下来的习惯，但是都是记录在印象笔记里，也在博客园开过一个博客，但一直都没在那里动过笔，大概就是等一个用Hexo博客的机会吧，如果我早在博客园写日记，估计就懒得搬过来了。</p>
-<p>  虽然hexo的SEO并不好（看到别人的博客都是在简书上转过来的），但是有了博客就有了一个精神角落，放自己的技术，也督促自己记录下学到的东西吧。</p>
-<hr>
-<p>  第一篇博文，就记录一下自己是怎么搭建这个博客的吧！</p>
-<p>  真的想动手搭博客是6月以来看到github上一些大神的博客，看到他们的博客都好漂亮，后来才知道是用hexo搭起来的（之前一直觉得“自己的博客”应该是从html到css都是自己写的），后来也看了一些搭hexo博客的文章，终于在6月底考完试后开始在今天做自己的博客。</p>
-<p>  首先，是阅读了 @代码咖啡 在简述上发的这篇<br>  <a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">20分钟教你使用hexo搭建github博客</a><br>  文章非常浅显易懂，这里在这篇文章的基础上补上一些我遇到的问题和我是怎么解决的：</p>
-<hr>
-<p>  文章中的一个步骤：<br>  <img src="http://ww1.sinaimg.cn/large/69838a3dgy1fh5vfzv835j20n205zmx6.jpg" alt=""><br>  这里的终端（terminal）指的是<a href="http://baike.baidu.com/link?url=wGwxgdlXcC3FyfMElm2kFdBJa7Lwox9VirKcO0X4PlqdAfYSI6Oio-zVz9IIm2TnbQlCRtOJKLXyeQCpnZBOyK" target="_blank" rel="external">git</a>这个版本控制系统，需要下载在电脑中，具体的使用<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">教程</a>看廖雪峰大大的教程，但是在搭博客过程中我们知道怎么安装就好，然后把git bash当命令行用。文章中的命令行都是在git bash输入的。</p>
-<p>  后面的node.js和hexo的安装因为自己有学一点点node的知识所以够用，不懂的可以留言，我可以帮助你解决问题！</p>
-<p>  还有一个是初始化博客后博客文件夹的数量会与作者的不一样，貌似会少一两个，不过不要紧接着进行。</p>
-<p>  后面的<br>  <img src="http://ww1.sinaimg.cn/large/69838a3dgy1fh5vnw25lqj20nf077jri.jpg" alt=""><br>  最后的timezone不要因为你不是上海的就改成你当地的地名，根据标准，中国区只能写Asia/Shanghai、Asia/Hongkong、Asia/Taipei、Asia/Harbin.</p>
-<p>  之后@代码咖啡 又发了一篇博文 <a href="http://www.jianshu.com/p/5973c05d7100" target="_blank" rel="external">【干货】2个小时教你hexo博客添加评论、打赏、RSS等功能</a> 是对hexo博客扩展功能的补充，他使用的博客主题是NexT，所以就这个主题做了介绍。</p>
-<hr>
-<p>  我使用的是<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a>这个主题，似乎很多人用的都是这个类似的主题，非常受欢迎，github上有3.6k+个star。使用的时候要对配置进行一些修改。</p>
-<p>  注意在README里说到的配置_config.yml是配置themes/yilia下的_config.yml，不是根目录下的_config.yml。可以在主题里的_config.yml加上你的微博，github，知乎等链接，如果没有的，可以使用#井号注释掉。</p>
-<p>  另外当你使用这个主题的时候，点开左侧边栏的”所有文章/关于我”，打开的侧边栏会提示缺少模块，按提示下载模块后在主目录下的_config.yml配置给出的那一段配置即可，注意缩进，_config.yml的配置如果缩进错误是不生效的。<br><br></p>
-<h2>使用博客中出现的问题及解决办法</h2>
+        <p><img style="display:block;margin: 0 auto" src="https://img3.doubanio.com/lpic/s8958650.jpg" alt=""></p>
+<blockquote>
+<p>&ensp;&ensp;把2016年寒假写的对《JavaScript高级程序设计》的笔记写在博客上，同时回看加修改，同时也更新到简书上。尽量一天一篇一章。</p>
+</blockquote>
+<a id="more"></a>
+<p><br><br></p>
+<div style="text-align: center;"><h2>第四章 变量、作用域和内存问题</h2></div><br><h3>4.1基本类型和引用类型的值</h3>ECMAScript变量可能包含两个不同类型数据的值：<span style="color:#F75D5D">基本类型值和引用类型值。</span><br>基本类型值指的是简单的数据段（Boolean类型、Number类型、String类型、Undefined、Null）  引用类型值指那些可能由多个值构成的对象（Object类型、Array类型、Date类型、RegExp类型、Function类型）<br>&gt;ES6中新增了<a href="http://es6.ruanyifeng.com/#docs/symbol" target="_blank" rel="external">Symbol</a>,是JavaScript的第七种数据类型。<br><br><h4>4.1.1动态的属性</h4><br>基本类型值和引用类型值的区别一：对于引用类型值，我们可以为其添加或删除属性和方法，但是基本类型值没有属性和方法。<br>例子:<br><pre><code>var person = new Object();                  var name = “Nicholas”<br>person.name = “Nicholas”;                   name.age = 27;<br>alert(person.name);    //“Nicholas”         alert(name.age)     //undefined<br></code></pre>以上代码一创建了一个对象并给他一个name属性，又通过alert访问成功。代码二给字符串name定义了一个age属性，但当我们访问的时候会发现这个属性不存在。这说明只能给引用类型值动态地添加属性，以便将来使用。<br><br><h4>4.1.2复制变量值</h4><br>基本类型值和引用类型值的区别二：在复制变量的时候，复制基本类型值和引用类型值也是有区别的。如果只是复制基本类型值，那就是简单复制到为新变量分配的位置上没毛病。当复制的是引用类型的值时，同样会将存储在变量对象中的值复制一份放到为新变量分配的空间中。不同的是，这个新的副本实际上是一个<span style="color:#F75D5D">指针</span>，复制结束后，两个变量实际上将引用同一个对象。因此，<span style="color:#F75D5D">如果复制的是引用类型值，当改变其中一个变量，就会影响另一个变量。</span>例子：<br><pre><code>var obj1 = new Object();<br>var obj2 = obj1;<br>obj1.name=”Nicholas”;<br>alert(obj2.name);    //“Nicholas”<br></code></pre><br>变量对象中的变量保存在堆中的对象之间的关系如图：<br><img style="display: block;margin:0 auto" src="http://ww1.sinaimg.cn/large/69838a3dgy1fh6p6f02ngj20cd07h3yu.jpg"><br><div style="text-align: center"><small style="color:grey; text-align: center;font-size: 12px;">图片来自《JavaScript高级程序设计》</small></div><br>可以看到当变量复制后，指针仍然指向一开始的Object，而不是复制出多一个Object。.<br><br><h4>4.1.3传递参数</h4><br>ECMAScript中所有函数的参数都是<span style="color:#F75D5D">按值传递</span>的。（无论参数是引用类型值和基本类型值）。也就是说，把函数外部的值复制给函数内部的参数，就和4.1.2复制变量值的原理一样，把一个变量复制到另一个变量（函数的参数）一样。有不少开发人员在这点会感到困惑，因为访问变量有按值和按引用两种方式，而参数只能<span style="color:#F75D5D">按值传递</span>。<br><br>————————–讨论参数传递的是引用类型值的情况————————–<br><pre><code>function setName(obj){<br>     obj.name = “Nicholas”;<br>}<br>var person = new Object();<br>setName(person);<br>alert(person.name);   //“Nicholas”<br></code></pre><br>以上代码创建了一个对象person，这个变量被传递到setName（）函数中后被复制给了obj，在这个函数内部，obj和person引用的是同一个对象。换句话说，<span style="color:#F75D5D">即使这个变量是按值传递的，obj也会按引用来访问同一个对象（遵循4.1.2的复制变量值原理）。</span>于是当为函数内部为obj添加name属性后，函数外部的person也会有所反映。因为person指向的对象在堆内存中只有一个，而且是全局对象。<span style="color:#F75D5D">有很多开发人员错误地认为：在局部作用域中修改的对象会在全局作用域中反映出来，就说明参数是按引用传递的（大错特错）。为了证明对象是按值传递的。</span>看下面的例子:<br><pre><code>function setName（obj）{<br>     obj.name = “Nicholas”;<br>     obj = new Object();<br>     obj.name = “Greg”;<br>}<br>var person = new Object();<br>setName(person);<br>alert(person.name);     //“Nicholas”<br></code></pre>这段代码增加了两行，为obj重新定义了一个对象，第二行为该对象定义了一个带有不同值的name属性。如果person是按引用传递的，那么person最后会被自动修改为指向其name属性值为“Greg”的新对象。但是在函数外访问person.name时，显示的值仍然是”Nicholas”。这说明即使在函数内部修改了参数的值，但原始的引用仍然保持未变。实际上，<span style="color:#F75D5D">当在函数内部重写obj时，这个变量引用的就是一个局部对象了(这个函数范围的局部对象)。而这个局部对象会在函数执行完毕后立即被销毁。</span><br><br><h4>4.1.4检测类型</h4><br>检测变量类型的方法有两种，一种是检测基本类型值的，用typeof，另一种是检测引用类型值的，用instanceof。<br>typeof操作符是确定一个变量是string,boolean,number，undefined的最佳工具，如果变量是对象<span style="color:#F75D5D">（根据规定，所有引用类型的值都是Object的实例）或null，则typeof操作符返回的值会是“object”。</span>例子：<br><pre><code>var s = “Nicholas”, b = true, i = 22,  u  , n = null,  o = new Object(),  d = new Date();<br>alert(typeof s);  //string<br>alert(typeof i);  //number<br>alert(typeof b);  //boolean<br>alert(typeof u);  //undefined<br>alert(typeof n);  //object<br>alert(typeof i);  //object<br>alert(typeof d);  //object</code></pre><br>因为typeof只能检测基本类型值，检测引用类型值时只会返回object，所以ECMAScript又提供了一个insanceof操作符，用法跟typeof不同，且只返回true 或 false。<br><br><div style="border: 1px solid #ccc; padding:10px"><strong>✎另类的情况</strong><br>使用typeof操作符检测函数时，该操作符会返回”function”。在Safari 5 及之前版本和Chrome 7及之前的版本中使用typeof检测正则表达式时，由于规范的原因，这个操作符也返回“function”。ECMA-262规定任何在内部实现 [ [ call ] ] 方法的对象都应该在应用typeof操作符时返回“function“。由于上述浏览器(Safari 5,Chrome 7)中的正则表达式也实现了这个方法，因此对正则表达式应用typeof会返回“function”。在IE和Firefox中，对正则表达式应用typeof会返回“object”.</div>
 
-<p>  刚开始用这个主题的时候是没有头像的，一开始把图片放在source的img下用相对路径引入发现没有效果，后来用的是微博的图床，一些人似乎用了图床后也显示不出来，解决方法参考:<a href="https://github.com/litten/hexo-theme-yilia/issues/288" target="_blank" rel="external">解决头像的问题</a></p>
-<p>  <strong style="color:#F65F5F">当你更新了themes下的_config.yml且git pull后用了</strong><pre><code>hexo clean</code></pre><br>  <pre><code>hexo g  //产生静态内容</code></pre><br>  <pre><code>hexo d  //发布到github</code></pre><br>  <strong style="color:#F65F5F">仍然没有反应的时候，不要急，确认自己的配置无误的话，只要多刷新几遍即可，应该是网络原因造成的更新延迟。几秒后更改就会生效</strong></p>
-<p>  我出现的问题是头像可以显示，但是样式不好看：<br>  <img src="http://ww1.sinaimg.cn/large/69838a3dgy1fh5w9ligfoj208y0cmt8p.jpg" alt=""><br>  用F12修改了一下样式，参考了上一个问题的解决方法，在themes\yilia\layout_partial下找到left-col.ejs文件，在第6行中的<br>  <pre><code><code>&lt;a href=&quot;/&quot; class=&quot;profilepic&quot;&gt;
-            &lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot;  class=&quot;js-avatar&quot;&gt;
- &lt;/a&gt;</code></code></pre></p>
-<p> 在img标签里添加一行行内样式： <pre><code>style=”position:absolute; left:-30%; top:-5%; max-width:150%;</code></pre><br> left和top的值根据你自己的图片位置调整。</p>
-<p> 如果在移动端上头像的显示仍然不理想，可以在themes\yilia\layout_partial下找到mobile-nav.ejs文件，在第十行<pre><code><code>&lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot;  class=&quot;js-avatar&quot;&gt;</code></code></pre>中添加一句<pre><code>style=”min-width:130%;”</code></pre>即可，具体数值仍然根据自己的情况调整。</p>
-<hr>
-<p> <br><br> </p><h2>几个常用的hexo命令</h2><br> 防止忘了又要百度，把几个命令记下来。<p></p>
-<ul>
-<li><p>新建文章</p>
-<pre><code>hexo new "文章标题"</code></pre>
-</li>
-<li><p>清除缓存、生成静态文件、发布</p>
-<pre><code>hexo clean
-hexo g
-hexo d </code></pre>
-</li>
-<li><p>修改主题配置后更新</p>
-<pre><code>cd themes/yilia
-git pull</code></pre>
+<p>如果变量是给定引用类型（根据它的原型链来识别，第6章将介绍原型链。#原书句）的实例那么instanceof操作符就会返回true。例子：</p>
+<pre><code>alert(person instanceof Object);    //变量person是Object吗？
+alert(colors instanceof Array);     //变量colors是Array吗？
+alert(pattern instanceof RegExp);   //变量pattern是RegExp吗？
 
-</li>
-</ul>
-<hr>
-<p>要总结的似乎就这些，接下来计划把上个寒假花了10几天写的《Javascript高级程序设计》笔记搬到上面来，可以的话，一天整理一篇。同时回顾学过的东西，再添加修改原有的笔记。<br><br><br>最后，晚安~<br><br><img src="http://ww1.sinaimg.cn/large/69838a3dgy1fh5xhycw4vj20hs0hsmzo.jpg" alt=""></p>
+//亲测左右两边位置不可互换，互换不会出现提示框
+</code></pre>
+因为根据规定，所有引用类型的值都是Object的实例，因此把Date，Array，RegExp等引用类型值用instanceof 与Object验证时，始终都会返回true。用instanceof操作符检测基本类型值时，该操作符时钟返回false，因为基本类型不是对象。
+
+<h3>4.2执行环境及作用域</h3>
+作用域链重要的一点就是内部执行环境可以使用其外部环境的变量和函数，并且可以改变那个变量的值，只要那个变量不是被当作参数传进去的而是直接使用的。（当作参数传入的是按值传递，改变的是复制出来的变量，不会改变原来的变量）<br><br>
+执行环境（execution context）和作用域其实超级简单。每个执行环境都有一个与之关联的变量对象（variable object），环境变量中定义的所有变量和函数都保存在这个对象中。但是我们无法用代码访问到这个变量对象。但解析器在处理数据时会在后台使用它。<br><br>
+
+全局执行环境是最外围的执行环境。根据ECMAScript实现所在的宿主环境不同，表示执行环境的对象也不一样。在Web浏览器中，全局执行环境被认为是<span style="color:#F75D5D">window对象</span>（第七章将详细讨论），因此，所有全局变量和函数都是作为window对象的属性和方法创建的（window对象是个变量对象，全局变量和函数是它的属性和方法）。某个执行环境（例如一个函数）中的所有代码执行完毕后，该环境被销毁，保存在其中的所有变量和函数定义也随之销毁（全局执行环境直到应用程序退出（网页关闭或浏览器关闭时才被销毁））<br>
+> &ensp;&ensp;在Node.js中的全局执行环境是global<br>
+
+每个函数都有自己的<span style="color:#F75D5D">执行环境</span>。当<span style="color:#F75D5D">执行流</span>进入一个函数时，函数的环境就会被推入一个<span style="color:#F75D5D">环境栈</span>中。而在函数执行之后，栈将其环境弹出，把控制权交给之前的执行环境。ECMAScript程序中的执行流正是由这个方便的机制在控制。 <br><br>
+当代码在其中一个环境中执行时，会创建变量对象的一个<span style="color:#F75D5D">作用域链</span>（scope chain）。作用域链的最前端，始终都是当前执行代码所在环境的变量对象。如果这个环境是函数，则将其<span style="color:#F75D5D">活动对象</span>（activation object）作为变量对象。活动对象在最开始时只包含一个变量，即<span style="color:#F75D5D">arguments对象</span>（这个对象在全局环境中不存在）。作用域链中的下一个变量对象来自包含它的外部环境，而再下一个变量对象则来自下一个包含环境。这样，一直延伸到全局执行环境；<br><br>
+标识符解析是沿着作用域链一级一级地搜索标识符的过程。搜索过程从作用域链最前端开始，然后逐级向后回溯，直到找到标识符为止（如果找不到，就会发生错误）
+例子：<pre><code>var color = "blue"；
+function changeColor(){
+     if(color == "blue"){
+          color = "red";
+     }
+}
+changeColor();
+alert(color);   // "red"
+</code></pre>在这个例子中，函数changeColor( )的作用域链包含两个<span style="color:#F75D5D">对象</span>：它自己的变量对象（其中定义着arguments对象）和<span style="color:#F75D5D">全局环境的变量对象</span>。可以在函数内部访问变量color，就是因为可以在这个作用域链中找到它。
+
+此外，在局部作用域中定义的变量可以在局部环境中与全局变量互换使用，如下面这个例子所示：
+<pre><code>var color = "blue";
+function changeColor(){
+     var anotherColor = "red";
+
+     function swapColors(){
+          var tempColor = anotherColor;
+          anotherColor = color;
+          color = tempColor;
+
+          //这里可以访问color，anotherColor 和 tempColor
+     }
+     //这里可以访问color和anotherColor，但不能访问tempColor
+     swapColors();
+}
+//这里只能访问color
+changeColor();</code></pre>以上代码涉及三个执行环境：全局环境、changeColor（）的局部环境和swapColor（） 的局部环境。swapColor的局部变量中有一个变量tempColor，该变量只有在swapColor环境中能访问到，但是swapColor（）内部可以访问其他两个环境中的所有变量。
+越在内部的局部环境，作用域链越长。对于这个例子中的swapColor（）而言，其作用域链中包含3个对象：swapColor( )的变量对象、changeColor（）的变量对象和全局对象。swapColor（）的局部环境开始时会现在自己的变量对象中搜索变量和函数名，如果搜索不到则再搜搜上一级作用域链。changeColor()的作用域链中只包含两个对象：它自己的变量对象和全局对象。也就是说，它不能访问swapColor（）的环境。
+
+<h4>4.2.1延长作用域</h4>
+有些语句可以在作用域链前端临时增加一个变量对象，该变量对象会在代码执行后被移除。在两种情况下会发生这种现象，具体来说，就是当执行流执行到下列任何一个语句时，作用域链会得到增长
+
+* try-catch语句的catch块
+
+* with语句
+
+这两个语句都会在作用域链的前端添加一个变量对象。对with语句来说，会将指定的对象添加到作用域链中，对catch语句来说，会创建一个新的变量对象，其中包含的是被抛出的错误对象的声明。例子：
+<pre><code>function buildUrl(){
+     var qs = "?debug=true";
+
+     with(location){
+          var url = href + qs;
+     }
+     return url;
+     }
+</code></pre>
+
+<p><div style="border: 1px solid #ccc; padding:10px"><strong>✎添加一个with语句块的知识点</strong><br>当在with语句块中使用方法或者变量时，程序会检查该方法是否是本地函数，变量是否是已定义变量，如果不是，它将检查伪对象（with的参数），看它是否为该对象的方法，属性。如上面例子with语句块中的href，本地无定义，则with语句块会自动加上location.href，所以href实际上为href。这个就是with的功能。with 语句是运行缓慢的代码块，尤其是在已设置了属性值时。大多数情况下，如果可能，最好避免使用它。</div><br><br>在此，with语句接收的是Location对象，因此其变量对象中就包含了location对象的所有属性和方法，而这个变量对象被添加到了作用域链的最前端，buildUrl（）函数中定义了一个变量qs。当在with语句中引用变量href时(实际引用的是location.href)。可以在当前执行环境的变量对象中找到。当引用变量qs时，引用的则是在buildUrl( )中定义的那个变量，而该变量位于函数环境的变量对象中。至于with语句的内部，则定义了一个名为url的变量，因而url就成了函数执行环境的一部分，所以可以作为函数的值被返回。</p>
+<p></p><h4>4.2.2没有块级作用域</h4><p></p>
+<p><div style="border: 1px solid #ccc; padding:10px"><strong>✎添块级作用域</strong><br>任何一对花括号中的语句都属于一个块，在这之中定义的所有变量在代码块之外都是不可见的，我们称之为块级作用域。</div><br><br><span style="color:#F75D5D">作用域有两种，块级作用域和函数作用域</span><br>讲到这就好理解。JS没块级作用域就是说在for循环和if语句块中定义的变量是可见的，可以被外部使用的，但像其他的语言Java,C,C#语言中，在for，if语句中定义的变量在语句执行完毕之后就会被<span style="color:#F75D5D">销毁</span>。但在JavaScript中，if语句中的变量声明会将变量添加到当前执行环境中。注意只是当前执行环境，如果for循环是在一个函数里，则定义的i在函数里是确定的数，在全局环境中仍然是not defined。例子：</p>
+<p><pre><code>if(true){                         for(var i = 0; i&lt;10; i++){<br>     var color = “blue”;               dosomething;<br>}                                 }</code></pre></p>
+<h2 id="alert-color-“blue”-alert-i-10"><a href="#alert-color-“blue”-alert-i-10" class="headerlink" title="alert(color)   //“blue”           alert(i)     //10"></a>alert(color)   //“blue”           alert(i)     //10</h2><p>function add(){<br>for (var i = 0; i<10; 10="" i++)="" {="" dosomething;="" }="" alert(i);="" add();="" <span="" style="color:#F75D5D">全局环境中 i is not defined<br></10;></p>
+<blockquote>
+<p>但是ECMA2015有办法解决没有块级作用域这个问题，就是用 <a href="http://es6.ruanyifeng.com/#docs/let" target="_blank" rel="external">let</a> 或 <a href="http://es6.ruanyifeng.com/#docs/let" target="_blank" rel="external">const</a>代替 var 去声明 i 。这样 i 就只会在for循环中被声明，for循环结束之后就会被销毁。</p>
+</blockquote>
+<p>1、声明变量<br>使用var声明的变量会自动添加到最接近的环境中。在函数内部，最接近的环境就是函数局部环境。在with语句中，最接近环境是函数环境。如果初始化变量时没有使用var声明，该变量会自动被添加到全局环境。在编写JavaScript的过程中，不声明而直接初始化变量是一个常见的错误做法，不建议这样做，在严格模式下，初始化未经声明的变量会导致错误。</p>
+<p>2、JavaScript的查询标识符机制<br>就是当要读取或写入一个标识符时，会通过搜索来确定标识符，搜索过程会从作用域链的最前端开始，向上逐级查找，如果在局部环境中找到了该标识符，则搜索过程停止。如果一直找到全局环境仍未找到这个标识符，则意味着该变量未声明。</p>
+<p></p><h3>4.3垃圾收集</h3><br>JavaScript具有自动垃圾收集机制，执行环境会负责管理代码执行过程中使用的内存。而在C和C++之类的语言中，开发人员的一项基本任务就是手工跟踪内存的使用情况。编写JavaScript的开发人员就不用关心内存使用的问题。所需内存的分配以及无用内存的回收完全实现了自动管理。<br>垃圾收集机制的原理很简单： 把再也不用的变量找出来，删除。为此，垃圾收集器会按照固定的时间间隔周期性地执行这一操作。<br>具体到浏览器中，通常有两个垃圾收集策略。<p></p>
+<p></p><h4>4.3.1标记清除</h4><br>IE、Firefox、Opera、Chrome、和Safari的JavaScript实现使用的都是标记清除式的垃圾收集策略，只不过垃圾收集的时间间隔不同。<br><span style="color:#F75D5D">标记清除</span>（mark-and-sweep）原理：当变量进入环境（例如，在函数中声明一个变量）时，就将这个变量表记为“进入环境”。被这么标记的变量逻辑上应该随时可能使用到，所以是不会删除的。而当变量离开环境时，则将其标记为“离开环境”。垃圾收集器在运行的时候会给存储在内存中的所有变量都加上标记，然后，它会去掉环境中的变量以及被环境中的变量引用的变量的标记。而在此之后再被加上标记的变量将被视为准备删除的变量，原因是环境中的变量已经无法访问到这些变量了。最后，垃圾收集器完成<span style="color:#F75D5D">内存清除</span>工作，销毁那些被标记的值并回收他们所占用的内存空间。<p></p>
+<p></p><h4>4.3.2引用计数</h4><br>这种垃圾收集策略不太常用。<br>引用计数的原理简单来说就是每引用一次该变量就对引用次数加一，当引用的变量被替换掉就对引用次数减一。当引用次数变为0就将该变量占用的内存回收回来。<br>但因为这种机制在<span style="color:#F75D5D">循环引用</span>时有BUG，所以现在已经不用。而仍然提到这个垃圾回收机制是因为IE8及以前的浏览器中有一部对象并不是原生JavaScript对象。例如其BOM和DOM中的对象就是使用C++以COM（component Object Model 组件对象模型）对象的形式实现的，而<span style="color:#F75D5D">COM对象的垃圾收集机制采用的就是引用技术策略。</span>因此，<span style="color:#F75D5D">即使IE的JavaScript引擎是使用标记清除策略实现的</span>，但JavaScript访问的COM对象依然是基于<span style="color:#F75D5D">引用计数</span>策略的。（但其实只要不涉及循环引用，引用技术策略就不会有问题）<br>下面的例子展示了使用COM对象导致的循环引用的问题：<p></p>
+<p><pre><code>var element = document.getElementById(“some_element”);<br>var myObject = new Object();<br>myObject.element = element;<br>element.someObject = myObject;<br></code></pre><br>这个例子在一个DOM元素（element）与一个原生JavaScript对象（myObject）之间创建了循环引用。其中，变量myObject有一个名为element的属性指向element对象；而变量element也有个属性名叫someObject回指myObject。由于存在循环引用，即使将例子中的DOM从页面中移除，它也永远不会被回收。<br>为了避免类似这样的循环问题，最好是在不使用他们的时候<span style="color:#F75D5D">手工断开</span>原生JavaScript对象与DOM元素之间的连接。例如这样消除前面例子创建的循环引用：</p>
+<p><pre><code>myObject.element = null;<br>element.someObject = null;<br></code></pre><br>将变量设置为null意味着切断变量与它此前引用的值之间的连接。当垃圾收集器下次运行时，就会删除这些值并回收它们占用的内存。<br>IE9已经把BOM和DOM对象都转换成了真正的JavaScript对象。这样，就避免了两种垃圾收集算法并存导致的问题，也消除了常见的<span style="color:#F75D5D">内存泄漏</span>问题。所以这是个<span style="color:#F75D5D">IE8及之前</span>的问题了。</p>
+<p></p><h4>4.3.3性能问题</h4><br>性能问题就是各浏览器的垃圾收集机制问题，跟开发人员关系不大，虽然可以手工启动垃圾收集机制但作者不建议我们这么做。<br>IE中调用<span style="color:#F75D5D">window.CollectGarbage( )</span>;Opera 7 及更高版本中调用<span style="color:#F75D5D">windo.opera.collect( )</span>会立即执行垃圾收集。<p></p>
+<p></p><h4>4.3.4管理内存</h4><br>有垃圾收集机制的JavaScript在编写时一般不用操心内存管理问题。但是JavaScript在进行内存管理和垃圾收集时面临的问题还是有点与众不同。其中一个主要的问题，就是<span style="color:#F75D5D">分配给Web浏览器的可用内存数量通常比分配给桌面应用程序的少</span>，这样是处于安全考虑，防止浏览器占用全部系统内存导致系统崩溃。内存限制问题不仅会影响<span style="color:#F75D5D">给变量分配内存</span>，同时还会影响<span style="color:#F75D5D">调用栈</span>以及在<span style="color:#F75D5D">一个线程中能够同时执行的语句数量</span>。<br>因此，确保占用最少的内存可以让页面获得更好的性能（<span style="color:#F75D5D">页面占用内存越少，性能越好</span>）。<span style="color:#F75D5D">优化内存</span>的最佳方式，就是为执行中的代码只保存必要的数据。<span style="color:#F75D5D">一旦数据不再有用，就通过将其设置为null来释放其引用</span>——这个做法叫做<span style="color:#F75D5D">解除引用</span>（dereferencing）。这一做法<span style="color:#F75D5D">适用于大多数全局变量和全局对象的属性</span>。局部变量本来就会在离开执行环境后<span style="color:#F75D5D">自动解除引用</span>，如下面这个例子所示：<p></p>
+<p><pre><code>function createPerson(name){<br>     var localPerson = new Object();<br>     localPerson.name = name;<br>     return localPerson;<br>}<br>var globalPerson = createPerson(“Nicholas”);<br><br>//手工解除globalPerson的引用<br>globalPerson = null;</code></pre><br>在这个例子中，变量globalPerson取得了createPerson函数返回的值，由于函数内的局部变量在离开执行环境后就<span style="color:#F75D5D">自动解除引用</span>，所以不用我们显式地解除引用，但对于全局变量globalPerson，在我们不需要它之后，我们可以<span style="color:#F75D5D">手工解除引用</span>。不是说解除了引用后该值就会被马上回收，解除引用的作用是让值脱离执行环境，在垃圾收集器下次运行时就会将其回收。</p>
 
       
 
@@ -259,7 +303,7 @@ git pull</code></pre>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
         		</li>
       		
 		</ul>
@@ -315,7 +359,7 @@ git pull</code></pre>
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://millionqw.github.io/2017/07/02/第一个hexo博客终于建成/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://millionqw.github.io/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -329,18 +373,9 @@ git pull</code></pre>
   
 <nav id="article-nav">
   
-    <a href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          《JS高级程序设计》第四章 作用域和内存问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/02/文章标题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">文章标题</div>
+    <a href="/2017/07/02/第一个hexo博客终于建成/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第一个hexo博客终于建成</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -353,7 +388,7 @@ git pull</code></pre>
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="第一个hexo博客终于建成" data-title="第一个hexo博客终于建成" data-url="https://millionqw.github.io/2017/07/02/第一个hexo博客终于建成/"></div>
+	<div class="ds-thread" data-thread-key="《JS高级程序设计》第四章-变量、作用域和内存问题" data-title="《JS高级程序设计》第四章 作用域和内存问题" data-url="https://millionqw.github.io/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -375,7 +410,7 @@ git pull</code></pre>
   
 
   
-  <div id="SOHUCS" sid="第一个hexo博客终于建成" ></div> 
+  <div id="SOHUCS" sid="《JS高级程序设计》第四章-变量、作用域和内存问题" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = "true"; 
