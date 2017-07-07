@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://millionqw.github.io">
-  <title>Million</title>
+  <title>Postcss使用体验：在未来写CSS | Million</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="广东金融学院15级，一直在前端">
-<meta name="keywords" content="前端,js,javascript,html5,css3,开发者,程序猿,编程,开源,Developer,Programmer,Coder,html,css">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Million">
-<meta property="og:url" content="https://millionqw.github.io/index.html">
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;接触Postcss的起因是在用Npm安装模块的时候看到的提示语句，一番接触后发现：我以后可能不需要写Sass了。">
+<meta name="keywords" content="前端,CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Postcss使用体验：在未来写CSS">
+<meta property="og:url" content="https://millionqw.github.io/2017/07/07/Postcss使用体验：在未来写CSSSS/index.html">
 <meta property="og:site_name" content="Million">
-<meta property="og:description" content="广东金融学院15级，一直在前端">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;接触Postcss的起因是在用Npm安装模块的时候看到的提示语句，一番接触后发现：我以后可能不需要写Sass了。">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/69838a3dgy1fhbmta9ejrj20k901kglf.jpg">
+<meta property="og:updated_time" content="2017-07-07T14:20:38.114Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Million">
-<meta name="twitter:description" content="广东金融学院15级，一直在前端">
+<meta name="twitter:title" content="Postcss使用体验：在未来写CSS">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;接触Postcss的起因是在用Npm安装模块的时候看到的提示语句，一番接触后发现：我以后可能不需要写Sass了。">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/69838a3dgy1fhbmta9ejrj20k901kglf.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Million" type="application/atom+xml">
   
@@ -149,16 +152,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Postcss使用体验：在未来写CSSSS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Postcss使用体验：在未来写CSSSS" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/07/Postcss使用体验：在未来写CSSSS/">Postcss使用体验：在未来写CSS</a>
+    <h1 class="article-title" itemprop="name">
+      Postcss使用体验：在未来写CSS
     </h1>
   
 
@@ -171,12 +172,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&nbsp;&nbsp;接触Postcss的起因是在用Npm安装模块的时候看到的提示语句，一番接触后发现：我以后可能不需要写Sass了。<br>
-        
-          <a class="article-more-a" href="/2017/07/07/Postcss使用体验：在未来写CSSSS/#more">more >></a>
-        
+        <p>&nbsp;&nbsp;接触Postcss的起因是在用Npm安装模块的时候看到的提示语句，一番接触后发现：我以后可能不需要写Sass了。<br><a id="more"></a><br>&nbsp;&nbsp;今天用Npm安装模块的时候出现了一段提示语句：<br><img src="http://ww1.sinaimg.cn/large/69838a3dgy1fhbmta9ejrj20k901kglf.jpg" alt=""><br>&nbsp;&nbsp;大致了解了一下Postcss是一个平台，上面有各种插件用来处理CSS，不过里面讲的东西，我觉得没必要用得这么麻烦。</p>
+<p>&nbsp;&nbsp;重点是他推荐的大漠老师<a href="http://www.w3cplus.com/blog/tags/517.html" target="_blank" rel="external">POSTCSS深入学习</a>,进了这个指引，你对Postcss的理解，最重要使用就能非常清晰了。</p>
+<p>&nbsp;&nbsp;说说我对Postcss的误解，一开始我以为它是像Sass、Less一样的预处理器，心想又要去学一种预处理器吗？后来又发现它竟然还有autoprefixer（自动添加浏览器前缀），压缩代码等功能，后来又觉得，这些功能能做的，gulp也能做，那我还要Postcss干嘛？</p>
+<p>&nbsp;&nbsp;通过学习后发现，它就是gulp+Sass的结合版，最重要的是一下几点：</p>
+<p></p><h3>一、清晰、简短的配置</h3><br>&nbsp;&nbsp;只要你引入了Npm中各种“postcss-”前缀的插件，只要你不是很想特别定制，只要在处理css的‘gulp’的’task’中给一个数组，写进你要添加的处理模块，gulp就能编译出CSS代码，相比gulp的插件，要写一个个方法，一些方法的配置还要去查文档，Postcss的配置简直简单到“引入即用”的感觉。<p></p>
+<p>&nbsp;&nbsp;这个就是我gulpfile.js中Postcss部分的配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">var gulp                = require(&apos;gulp&apos;);</div><div class="line">var postcss             = require(&apos;gulp-postcss&apos;);</div><div class="line">var autoprefixer        = require(&apos;autoprefixer&apos;);                //自动添加前缀</div><div class="line">var opacity             = require(&apos;postcss-opacity&apos;); 		  //opacity属性的降级处理</div><div class="line">var pseudoelements      = require(&apos;postcss-pseudoelements&apos;); 	  //让IE8支持::的伪元素</div><div class="line">var vmin                = require(&apos;postcss-vmin&apos;); 		  //为IE9支持viewport相对单位vmin</div><div class="line">var pixrem              = require(&apos;pixrem&apos;); 		          //给rem添加px作为降级处理为IE8</div><div class="line">var will_change         = require(&apos;postcss-will-change&apos;);	  //为will-change属性添加回退</div><div class="line">var cssnext             = require(&apos;cssnext&apos;);			  //写未来的CSS</div><div class="line">var precss              = require(&apos;precss&apos;);			  //用函数的方法写CSS</div><div class="line">var color_rgba_fallback = require(&apos;postcss-color-rgba-fallback&apos;); //给rgba()提供降级方案为IE8</div><div class="line">var atImport            = require(&apos;postcss-import&apos;);		  //可以使用@import引入其他CSS文件，减少Http请求</div><div class="line">var mqpacker            = require(&apos;css-mqpacker&apos;);		  //合并媒体查询</div><div class="line">var size                = require(&apos;postcss-size&apos;);                //CSS中一个size属性同时写height和width</div><div class="line"></div><div class="line">gulp.task(&apos;css&apos;, function () &#123;</div><div class="line">	//will_change必须在autoprefixer之前</div><div class="line">  var processors = [</div><div class="line">  		will_change, autoprefixer, cssnext,color_rgba_fallback, opacity, pseudoelements, vmin, pixrem,precss,atImport,mqpacker,size</div><div class="line">  ];</div><div class="line">  return gulp.src(&apos;./src/*.css&apos;)</div><div class="line">    .pipe(postcss(processors))</div><div class="line">    .pipe(gulp.dest(&apos;./dest&apos;));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;可以看到除了长长的引用模块外，想要使用Postcss中的插件，只需要在processors数组中添加你要使用的模块，用pipe()处理即可。</p>
+<p></p><h3>二、极大减少CSS书写量</h3><br>&nbsp;&nbsp;如果你已经厌倦了一次次地写重复的垂直居中、水平居中，Postcss中，有postcss-center帮你搞定，只要你引入了postcss-center，<code>top:center</code>用于实现垂直居中，<code>left:center</code>用于实现水平居中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.centered &#123;</div><div class="line">  top:center;</div><div class="line">  left:center;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p>
+<p>编译出来的CSS：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.centered&#123;</div><div class="line">  position: absolute;</div><div class="line">  top: 50％;</div><div class="line">  right: 50%;</div><div class="line">  margin-right: -50%;</div><div class="line">  transform: translate(-50%, -50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><small>两段代码来自大漠老师教程</small></p>
+<p>&nbsp;&nbsp;诸如此类，清除浮动，设置定位，设置水平，垂直间距，输出颜色代码等等等，都分别有postcss-clearfix，postcss-position，postcss-verthorz，postcss-color-short等插件可以实现，极大提升写代码效率。因为我还在学习中，这些东西我觉得还是先自己写明白了比较适合，所以只使用了postcss-size这个插件，就是使用后height和width可以同时写在同一行，我早就想这么做啦23333：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.img &#123;</div><div class="line">  size: 200px 200px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>编译后的CSS：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">img &#123;</div><div class="line">  height: 200px;</div><div class="line">  width: 200px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p></p><h3>三、类似Sass的语法</h3><br>&nbsp;&nbsp;并不是说postcss有类似Sass的语法，而是因为postcss有cssnext插件，可以用未来使用的css语法，再转化为css现在浏览器支持的语法，而类似Sass中的mixin，extend，定义变量，函数等功能，未来的CSS语法也都有，只是与Sass有少许差异，而且如果你想用Sass，Less编写也可以，只要调整一下编译顺序，让编译Sass的命令在postcss命令之前即可。<p></p>
+<p>&nbsp;&nbsp;总而言之，postcss上这么多插件，合理搭配使用可以极大地提高开发效率，我觉得既然未来的CSS语法已经摆在了你面前，就像ES6语法有了babel的支持一样，可以借助postcss而提前使用，那么为什么不早点使用迟早会成为标准的语法呢，我已经打算开始尝试结合gulp上的其他配置，开始学习“未来的CSS”，尝试postcss的使用，在未来写CSS，一起试试吧！</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -200,270 +234,114 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/07/Postcss使用体验：在未来写CSSSS/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://millionqw.github.io/2017/07/07/Postcss使用体验：在未来写CSSSS/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-Javascript》高级程序设计 第五章 详细解释引用类型（上）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/06/Javascript》高级程序设计 第五章 详细解释引用类型（上）/">《Javascript》高级程序设计 第五章 详细解释引用类型（上）</a>
-    </h1>
   
-
-        
-        <a href="/2017/07/06/Javascript》高级程序设计 第五章 详细解释引用类型（上）/" class="archive-article-date">
-  	<time datetime="2017-07-06T13:45:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p></p><h1>第五章 引用类型</h1><br>引用类型的值（对象）是引用类型的一个实例。<br>如前所述，对象是某个特定引用类型的<strong>实例</strong>。新对象是使用new<strong>操作符</strong>后跟一个构造函数来创建的。构造函数本身也是一个函数，只不过该函数是出于创建新对象的目的而定义的。例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var person = new Object();</div></pre></td></tr></table></figure><p></p>
-<p>这行代码创建了一个Object这个引用类型的新实例，然后把该实例保存在了变量person中。（这句话特别有意思，如果我用自己的话说，会说“创建了一个叫person的Object的新实例，而不会说先创建了实例再把实例保存在person中”）使用的构造函数就是<strong>Object( )</strong>。它为新对象（person定义了默认的属性和方法）。ECMAScript提供了很多<strong>原生引用类型</strong>（例如Object( ),Date( ),RegExp( )）。以便开发人员完成常见的计算任务。</p>
-        
-          <a class="article-more-a" href="/2017/07/06/Javascript》高级程序设计 第五章 详细解释引用类型（上）/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/06/Javascript》高级程序设计 第五章 详细解释引用类型（上）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+    <a href="/2017/07/06/Javascript》高级程序设计 第五章 详细解释引用类型（上）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《Javascript》高级程序设计 第五章 详细解释引用类型（上）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-《JS高级程序设计》第四章-变量、作用域和内存问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/">《JS高级程序设计》第四章 作用域和内存问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/" class="archive-article-date">
-  	<time datetime="2017-07-03T04:38:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img style="display:block;margin: 0 auto" src="https://img3.doubanio.com/lpic/s8958650.jpg" alt=""></p>
-<blockquote>
-<p>&ensp;&ensp;把2016年寒假写的对《JavaScript高级程序设计》的笔记写在博客上，同时回看加修改，同时也更新到简书上。尽量一天一篇一章。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Postcss使用体验：在未来写CSSSS" data-title="Postcss使用体验：在未来写CSS" data-url="https://millionqw.github.io/2017/07/07/Postcss使用体验：在未来写CSSSS/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
-    <article id="post-第一个hexo博客终于建成" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/02/第一个hexo博客终于建成/">第一个hexo博客终于建成</a>
-    </h1>
   
 
-        
-        <a href="/2017/07/02/第一个hexo博客终于建成/" class="archive-article-date">
-  	<time datetime="2017-07-02T13:20:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>折腾了半个下午加半个晚上，终于建成了自己的第一个hexo博客，也是自己的第一个博客ヽ(^･ω･^)丿
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/07/02/第一个hexo博客终于建成/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/02/第一个hexo博客终于建成/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
   
-    <article id="post-文章标题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/02/文章标题/">文章标题</a>
-    </h1>
+  <div id="SOHUCS" sid="Postcss使用体验：在未来写CSSSS" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "true"; 
+var conf = "true"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
   
 
-        
-        <a href="/2017/07/02/文章标题/" class="archive-article-date">
-  	<time datetime="2017-07-02T08:20:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>你好，欢迎来到我的个人技术博客。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/02/文章标题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -486,8 +364,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
