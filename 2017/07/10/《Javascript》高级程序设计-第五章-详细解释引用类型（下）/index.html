@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://millionqw.github.io">
   <title>《Javascript》高级程序设计 第五章 详细解释引用类型（下） | Million</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的文章会在我的Blog同步更新，Blog刚搭了几天，用于记录我的学习过程：Million 5.5Function类型作者说ECMAScript中最有意思的是函数，有意思的根源在于，函数实际上是对象。每个函数都是Function类型的实例。与其他引用类型一样，函数类型也有属性和方法。由于函数是对象，因此函数名实际上只是一个指向函数对象的指针，不会与某个函数绑定。 函数通常是使用函数声明语法定义的，">
+  <meta name="description" content="我的文章会在我的Blog同步更新，Blog刚搭了几天，用于记录我的学习过程：Million 5.5Function类型作者说ECMAScript中最有意思的是函数，有意思的根源在于，函数实际上是对象。每个函数都是Function类型的实例。与其他引用类型一样，函数类型也有属性和方法。由于函数是对象，因此函数名实际上只是一个指向函数对象的指针，不会与某个函数绑定。">
 <meta name="keywords" content="前端,高程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Javascript》高级程序设计 第五章 详细解释引用类型（下）">
 <meta property="og:url" content="https://millionqw.github.io/2017/07/10/《Javascript》高级程序设计-第五章-详细解释引用类型（下）/index.html">
 <meta property="og:site_name" content="Million">
-<meta property="og:description" content="我的文章会在我的Blog同步更新，Blog刚搭了几天，用于记录我的学习过程：Million 5.5Function类型作者说ECMAScript中最有意思的是函数，有意思的根源在于，函数实际上是对象。每个函数都是Function类型的实例。与其他引用类型一样，函数类型也有属性和方法。由于函数是对象，因此函数名实际上只是一个指向函数对象的指针，不会与某个函数绑定。 函数通常是使用函数声明语法定义的，">
-<meta property="og:updated_time" content="2017-07-10T15:35:44.988Z">
+<meta property="og:description" content="我的文章会在我的Blog同步更新，Blog刚搭了几天，用于记录我的学习过程：Million 5.5Function类型作者说ECMAScript中最有意思的是函数，有意思的根源在于，函数实际上是对象。每个函数都是Function类型的实例。与其他引用类型一样，函数类型也有属性和方法。由于函数是对象，因此函数名实际上只是一个指向函数对象的指针，不会与某个函数绑定。">
+<meta property="og:updated_time" content="2017-09-28T13:45:41.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Javascript》高级程序设计 第五章 详细解释引用类型（下）">
-<meta name="twitter:description" content="我的文章会在我的Blog同步更新，Blog刚搭了几天，用于记录我的学习过程：Million 5.5Function类型作者说ECMAScript中最有意思的是函数，有意思的根源在于，函数实际上是对象。每个函数都是Function类型的实例。与其他引用类型一样，函数类型也有属性和方法。由于函数是对象，因此函数名实际上只是一个指向函数对象的指针，不会与某个函数绑定。 函数通常是使用函数声明语法定义的，">
+<meta name="twitter:description" content="我的文章会在我的Blog同步更新，Blog刚搭了几天，用于记录我的学习过程：Million 5.5Function类型作者说ECMAScript中最有意思的是函数，有意思的根源在于，函数实际上是对象。每个函数都是Function类型的实例。与其他引用类型一样，函数类型也有属性和方法。由于函数是对象，因此函数名实际上只是一个指向函数对象的指针，不会与某个函数绑定。">
   
     <link rel="alternative" href="/atom.xml" title="Million" type="application/atom+xml">
   
@@ -172,6 +172,7 @@
       
         <p>我的文章会在我的Blog同步更新，Blog刚搭了几天，用于记录我的学习过程：<a href="https://millionqw.github.io/">Million</a></p>
 <p></p><h2>5.5Function类型</h2><br>作者说ECMAScript中最有意思的是函数，有意思的根源在于，<strong>函数实际上是对象。每个函数都是Function类型的实例</strong>。<br>与其他引用类型一样，函数类型也有属性和方法。由于函数是对象，因此<strong>函数名实际上只是一个指向函数对象的指针，不会与某个函数绑定</strong>。<p></p>
+<a id="more"></a>
 <p>函数通常是使用函数声明语法定义的，如下面的例子所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function sum(num1,num2)&#123;</div><div class="line">     return num1+num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>这与下面使用函数表达式定义函数的方法几乎相差无几:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var sum = function(num1,num2)&#123;</div><div class="line">     return num1+num2;</div><div class="line">&#125;;   // ← 注意最后的分号，声明完变量必加的分号</div></pre></td></tr></table></figure></p>
 <p>第二段代码定义了变量sum并将其初始化为一个函数（<strong>注意这句话的顺序</strong>，把一个定义好的变量初始化为一个函数）。我们可以发现用函数表达式创建的函数，function关键字后面没有函数名。因为没有必要。通过变量sum即可以引用到函数（<strong>注意，你不能说变量sum是函数名</strong>）。另外，<strong>注意函数末尾有一个分号</strong>，因为说到底sum还是个变量，只是变量的值是一个函数！<br><br><br>最后一种定义函数的方式，因为函数是对象，所以可以使用Function构造函数。Function可以接收任意个数量的参数，最后一个参数始终被当作<strong>函数体</strong>，前面的都是函数的参数。例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var sum = new Function(&quot;num1&quot;,&quot;num2&quot;,&quot;num3&quot;,&quot;return num1+num2&quot;);   //不推荐</div></pre></td></tr></table></figure></p>
