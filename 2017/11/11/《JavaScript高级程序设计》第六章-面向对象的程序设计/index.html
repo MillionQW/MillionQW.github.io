@@ -6,18 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://millionqw.github.io">
-  <title>Million</title>
+  <title>《JavaScript高级程序设计》第六章 面向对象的程序设计 | Million</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="广东金融学院15级，一直在前端">
-<meta name="keywords" content="前端,js,javascript,html5,css3,开发者,程序猿,编程,开源,Developer,Programmer,Coder,html,css">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Million">
-<meta property="og:url" content="https://millionqw.github.io/index.html">
+  <meta name="description" content="目录6.1理解对象6.1.1属性类型（对象有两种属性：数据属性和访问器属性）     1.数据属性（[ [Configurable] ]、[ [Enumerable] ]、[ [Writable] ]、[ [Value] ] ；修改默认特性的方法）     2.访问器属性（[ [Configurable] ] 、[ [Enumerable] ] 、[ [Get] ] 、[ [Set] ]；Obje">
+<meta name="keywords" content="前端,高程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《JavaScript高级程序设计》第六章 面向对象的程序设计">
+<meta property="og:url" content="https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/index.html">
 <meta property="og:site_name" content="Million">
-<meta property="og:description" content="广东金融学院15级，一直在前端">
+<meta property="og:description" content="目录6.1理解对象6.1.1属性类型（对象有两种属性：数据属性和访问器属性）     1.数据属性（[ [Configurable] ]、[ [Enumerable] ]、[ [Writable] ]、[ [Value] ] ；修改默认特性的方法）     2.访问器属性（[ [Configurable] ] 、[ [Enumerable] ] 、[ [Get] ] 、[ [Set] ]；Obje">
+<meta property="og:image" content="https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/src/file6/Evernote%20Snapshot%2020170209%20102903.jpg">
+<meta property="og:image" content="https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/第六章%20面向对象的程序设计_files/Evernote%20Snapshot%2020170210%20214147.jpg">
+<meta property="og:image" content="https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/第六章%20面向对象的程序设计_files/Evernote%20Snapshot%2020170210%20214936.jpg">
+<meta property="og:image" content="https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/第六章%20面向对象的程序设计_files/Evernote%20Snapshot%2020170210%20215758.jpg">
+<meta property="og:image" content="https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/第六章%20面向对象的程序设计_files/Evernote%20Snapshot%2020170209%20102903%20[1].jpg">
+<meta property="og:image" content="https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/第六章%20面向对象的程序设计_files/Evernote%20Snapshot%2020170210%20214147%20[1].jpg">
+<meta property="og:image" content="https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/第六章%20面向对象的程序设计_files/Evernote%20Snapshot%2020170210%20214936%20[1].jpg">
+<meta property="og:image" content="https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/第六章%20面向对象的程序设计_files/Evernote%20Snapshot%2020170210%20215758%20[1].jpg">
+<meta property="og:updated_time" content="2017-11-11T06:00:55.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Million">
-<meta name="twitter:description" content="广东金融学院15级，一直在前端">
+<meta name="twitter:title" content="《JavaScript高级程序设计》第六章 面向对象的程序设计">
+<meta name="twitter:description" content="目录6.1理解对象6.1.1属性类型（对象有两种属性：数据属性和访问器属性）     1.数据属性（[ [Configurable] ]、[ [Enumerable] ]、[ [Writable] ]、[ [Value] ] ；修改默认特性的方法）     2.访问器属性（[ [Configurable] ] 、[ [Enumerable] ] 、[ [Get] ] 、[ [Set] ]；Obje">
+<meta name="twitter:image" content="https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/src/file6/Evernote%20Snapshot%2020170209%20102903.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Million" type="application/atom+xml">
   
@@ -149,16 +159,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-《JavaScript高级程序设计》第六章-面向对象的程序设计" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-《JavaScript高级程序设计》第六章-面向对象的程序设计" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/">《JavaScript高级程序设计》第六章 面向对象的程序设计</a>
+    <h1 class="article-title" itemprop="name">
+      《JavaScript高级程序设计》第六章 面向对象的程序设计
     </h1>
   
 
@@ -175,71 +183,26 @@
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-《Javascript》高级程序设计-第五章-详细解释引用类型（下）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/10/《Javascript》高级程序设计-第五章-详细解释引用类型（下）/">《Javascript》高级程序设计 第五章 详细解释引用类型（下）</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/10/《Javascript》高级程序设计-第五章-详细解释引用类型（下）/" class="archive-article-date">
-  	<time datetime="2017-07-10T14:02:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我的文章会在我的Blog同步更新，Blog刚搭了几天，用于记录我的学习过程：<a href="https://millionqw.github.io/">Million</a></p>
-<p></p><h2>5.5Function类型</h2><br>作者说ECMAScript中最有意思的是函数，有意思的根源在于，<strong>函数实际上是对象。每个函数都是Function类型的实例</strong>。<br>与其他引用类型一样，函数类型也有属性和方法。由于函数是对象，因此<strong>函数名实际上只是一个指向函数对象的指针，不会与某个函数绑定</strong>。<p></p>
-        
-          <a class="article-more-a" href="/2017/07/10/《Javascript》高级程序设计-第五章-详细解释引用类型（下）/#more">more >></a>
-        
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -263,335 +226,114 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/10/《Javascript》高级程序设计-第五章-详细解释引用类型（下）/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-Postcss使用体验：在未来写CSSSS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/07/Postcss使用体验：在未来写CSSSS/">Postcss使用体验：在未来写CSS</a>
-    </h1>
   
-
-        
-        <a href="/2017/07/07/Postcss使用体验：在未来写CSSSS/" class="archive-article-date">
-  	<time datetime="2017-07-07T12:24:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&nbsp;&nbsp;接触Postcss的起因是在用Npm安装模块的时候看到的提示语句，一番接触后发现：我以后可能不需要写Sass了。<br>
-        
-          <a class="article-more-a" href="/2017/07/07/Postcss使用体验：在未来写CSSSS/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/07/Postcss使用体验：在未来写CSSSS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+    <a href="/2017/07/10/《Javascript》高级程序设计-第五章-详细解释引用类型（下）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《Javascript》高级程序设计 第五章 详细解释引用类型（下）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-《Javascript》高级程序设计 第五章 详细解释引用类型（上）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/06/《Javascript》高级程序设计 第五章 详细解释引用类型（上）/">《Javascript》高级程序设计 第五章 详细解释引用类型（上）</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/06/《Javascript》高级程序设计 第五章 详细解释引用类型（上）/" class="archive-article-date">
-  	<time datetime="2017-07-06T13:45:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p></p><h1>第五章 引用类型</h1><br>引用类型的值（对象）是引用类型的一个实例。<br>如前所述，对象是某个特定引用类型的<strong>实例</strong>。新对象是使用new<strong>操作符</strong>后跟一个构造函数来创建的。构造函数本身也是一个函数，只不过该函数是出于创建新对象的目的而定义的。例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var person = new Object();</div></pre></td></tr></table></figure><p></p>
-<p>这行代码创建了一个Object这个引用类型的新实例，然后把该实例保存在了变量person中。（这句话特别有意思，如果我用自己的话说，会说“创建了一个叫person的Object的新实例，而不会说先创建了实例再把实例保存在person中”）使用的构造函数就是<strong>Object( )</strong>。它为新对象（person定义了默认的属性和方法）。ECMAScript提供了很多<strong>原生引用类型</strong>（例如Object( ),Date( ),RegExp( )）。以便开发人员完成常见的计算任务。</p>
-        
-          <a class="article-more-a" href="/2017/07/06/《Javascript》高级程序设计 第五章 详细解释引用类型（上）/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/06/《Javascript》高级程序设计 第五章 详细解释引用类型（上）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="《JavaScript高级程序设计》第六章-面向对象的程序设计" data-title="《JavaScript高级程序设计》第六章 面向对象的程序设计" data-url="https://millionqw.github.io/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
-    <article id="post-《JS高级程序设计》第四章-变量、作用域和内存问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/">《JS高级程序设计》第四章 作用域和内存问题</a>
-    </h1>
   
 
-        
-        <a href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/" class="archive-article-date">
-  	<time datetime="2017-07-03T04:38:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img style="display:block;margin: 0 auto" src="https://img3.doubanio.com/lpic/s8958650.jpg" alt=""></p>
-<blockquote>
-<p>&ensp;&ensp;把2016年寒假写的对《JavaScript高级程序设计》的笔记写在博客上，同时回看加修改，同时也更新到简书上。尽量一天一篇一章。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
   
-    <article id="post-第一个hexo博客终于建成" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/02/第一个hexo博客终于建成/">第一个hexo博客终于建成</a>
-    </h1>
+  <div id="SOHUCS" sid="《JavaScript高级程序设计》第六章-面向对象的程序设计" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "true"; 
+var conf = "true"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
   
 
-        
-        <a href="/2017/07/02/第一个hexo博客终于建成/" class="archive-article-date">
-  	<time datetime="2017-07-02T13:20:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>折腾了半个下午加半个晚上，终于建成了自己的第一个hexo博客，也是自己的第一个博客ヽ(^･ω･^)丿
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/07/02/第一个hexo博客终于建成/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/02/第一个hexo博客终于建成/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-文章标题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/02/文章标题/">文章标题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/02/文章标题/" class="archive-article-date">
-  	<time datetime="2017-07-02T08:20:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>你好，欢迎来到我的个人技术博客。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/02/文章标题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -614,8 +356,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
