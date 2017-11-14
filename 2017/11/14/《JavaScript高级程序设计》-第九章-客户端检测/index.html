@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://millionqw.github.io">
-  <title>Archives: 2017 | Million</title>
+  <title>《JavaScript高级程序设计》 第九章 客户端检测 | Million</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="广东金融学院15级，一直在前端">
-<meta name="keywords" content="前端,js,javascript,html5,css3,开发者,程序猿,编程,开源,Developer,Programmer,Coder,html,css">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Million">
-<meta property="og:url" content="https://millionqw.github.io/archives/2017/index.html">
+  <meta name="description" content="目录9.1能力检测9.1.1更可靠的能力检测（用typeof检测某属性是不是自己要的类型，避免重名）9.1.2能力检测，不是浏览器检测（不要用能力检测推测浏览器）9.2怪癖检测9.3用户代理检测9.3.1用户代理字符串的历史9.3.2用户代理字符串检测技术1.识别呈现引擎2.识别浏览器3.识别平台4.识别window操作系统9.3.3完整代码9.3.4使用方法就是最蛋疼的跨浏览器检测。作者做只要能">
+<meta name="keywords" content="前端,高程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《JavaScript高级程序设计》 第九章 客户端检测">
+<meta property="og:url" content="https://millionqw.github.io/2017/11/14/《JavaScript高级程序设计》-第九章-客户端检测/index.html">
 <meta property="og:site_name" content="Million">
-<meta property="og:description" content="广东金融学院15级，一直在前端">
+<meta property="og:description" content="目录9.1能力检测9.1.1更可靠的能力检测（用typeof检测某属性是不是自己要的类型，避免重名）9.1.2能力检测，不是浏览器检测（不要用能力检测推测浏览器）9.2怪癖检测9.3用户代理检测9.3.1用户代理字符串的历史9.3.2用户代理字符串检测技术1.识别呈现引擎2.识别浏览器3.识别平台4.识别window操作系统9.3.3完整代码9.3.4使用方法就是最蛋疼的跨浏览器检测。作者做只要能">
+<meta property="og:updated_time" content="2017-11-14T01:33:59.168Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Million">
-<meta name="twitter:description" content="广东金融学院15级，一直在前端">
+<meta name="twitter:title" content="《JavaScript高级程序设计》 第九章 客户端检测">
+<meta name="twitter:description" content="目录9.1能力检测9.1.1更可靠的能力检测（用typeof检测某属性是不是自己要的类型，避免重名）9.1.2能力检测，不是浏览器检测（不要用能力检测推测浏览器）9.2怪癖检测9.3用户代理检测9.3.1用户代理字符串的历史9.3.2用户代理字符串检测技术1.识别呈现引擎2.识别浏览器3.识别平台4.识别window操作系统9.3.3完整代码9.3.4使用方法就是最蛋疼的跨浏览器检测。作者做只要能">
   
     <link rel="alternative" href="/atom.xml" title="Million" type="application/atom+xml">
   
@@ -149,36 +150,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-《JavaScript高级程序设计》-第九章-客户端检测" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      《JavaScript高级程序设计》 第九章 客户端检测
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/14/《JavaScript高级程序设计》-第九章-客户端检测/" class="archive-article-date">
+
+        
+        <a href="/2017/11/14/《JavaScript高级程序设计》-第九章-客户端检测/" class="archive-article-date">
   	<time datetime="2017-11-14T01:32:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/14/《JavaScript高级程序设计》-第九章-客户端检测/">《JavaScript高级程序设计》 第九章 客户端检测</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div><br><span><div><b>目录</b></div><div><b>9.1能力检测</b></div><div style="margin-left:40px;">9.1.1更可靠的能力检测（用typeof检测某属性是不是自己要的类型，避免重名）</div><div style="margin-left:40px;">9.1.2能力检测，不是浏览器检测（不要用能力检测推测浏览器）</div><div><b>9.2怪癖检测</b></div><div><b>9.3用户代理检测</b></div><div style="margin-left:40px;">9.3.1用户代理字符串的历史</div><div style="margin-left:40px;">9.3.2用户代理字符串检测技术</div><div style="margin-left:80px;">1.识别呈现引擎</div><div style="margin-left:80px;">2.识别浏览器</div><div style="margin-left:80px;">3.识别平台</div><div style="margin-left:80px;">4.识别window操作系统</div><div style="margin-left:40px;">9.3.3完整代码</div><div style="margin-left:40px;">9.3.4使用方法</div><div><br></div><div>就是最蛋疼的跨浏览器检测。作者做只要能找到更通用的方法，就优先采用更通用的方法。先设计最通用的方案，然后再使用特定于浏览器的技术增强该方案。</div><div><br></div>
 
-        <div class="article-info info-on-right">
-          
+<a id="more"></a>
+<pre><code>&lt;div&gt;&lt;b&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;9.1能力检测&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;最常见且被广泛接受的客户端检测形式是&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;能力检测&lt;/span&gt;（又称&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;特定检测&lt;/span&gt;）。能力检测的目标&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;不是识别特定的浏览器&lt;/span&gt;。而是识别浏览器的&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;能力&lt;/span&gt;。用这种方式不用顾及特定的浏览器如何如何，只要确定浏览器支持特定的能力，就可以给出解决方案。能力检测的基本模式如下：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;if(object.propertyInQuestion){&lt;/div&gt;&lt;div&gt;     //使用object.propertyInQuestion&lt;/div&gt;&lt;div&gt;}else if(object.otherPropertyInQuestion){&lt;/div&gt;&lt;div&gt;     //第二种方法&lt;/div&gt;&lt;div&gt;}else{&lt;/div&gt;&lt;div&gt;     //第三种或者抛出错误&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;要理解能力检测，必须理解两个重要的概念：第一个概念就是先检测达成目的最常用的特性，后检测比较刁钻的特性。第二个概念是必须测试实际要用到的特性，不要用其他特性。一个特性存在，不一定以为着另一个特性也存在（或者不意味着就是你项针对的那个浏览器）。例子：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;function getWindowWidth(){&lt;/div&gt;&lt;div&gt;     if(document.all){           //假设是IE&lt;/div&gt;&lt;div&gt;          return document.documentElement;     //错误的用法&lt;/div&gt;&lt;div&gt;     }else{&lt;/div&gt;&lt;div&gt;          return window.innerWidth;&lt;/div&gt;&lt;div&gt;     }&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;document.all是IE的用法，小伙子以为检测document.all通过，就说明这是个IE浏览器，然而其实Opera也支持document.all方法。所以直接拿想用的特定去检测别用其他特性，就是第二个概念。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;9.1.1更可靠的能力检测&lt;/b&gt;&lt;/div&gt;&lt;div&gt;先看一个错误的例子：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;function isSortable(object){&lt;/div&gt;&lt;div&gt;     return !!object.sort&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;双非运算符：根据自己的检测，应该是可以把所有类型的值转换成布尔值的运算符比如 !!0返回false、！！true返回true、！！字符串返回true。使用这个运算符就可以不用写 if 语句直接知道真假。&lt;/div&gt;&lt;div&gt;上面的例子通过检测对象是否存在sort（）方法，来确定对象是否支持排序方法。问题是，如果有一个自定义对象定义了一个sort属性（不是方法），那这个对象也会返回true：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;var result = isSortable({sort:&amp;quot;Nicholas&amp;quot;});&lt;/div&gt;&lt;/div&gt;&lt;div&gt;所以检测某个属性是否存在不能确定对象是否支持排序，更好的方式：不如直接检测sort是不是一个函数：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;function isSortable(object){&lt;/div&gt;&lt;div&gt;     return typeof object.sort == &amp;quot;function&amp;quot;;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;如果检测确定sort是个函数，那就可以调用它对数据排序。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;在可能的情况下&lt;/span&gt;，要尽量使用&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;typeof&lt;/span&gt;进行&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;能力检测&lt;/span&gt;。特别是，&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;宿主对象（DOM对象）&lt;/span&gt;没有义务让&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;typeof&lt;/span&gt;返回合理的值（那还用typeof？？？）。最&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;令人发指&lt;/span&gt;的事就发生在IE中（233333），大多数浏览器在检测到document.createElement（）存在的时候，都会返回true。但是在IE8及之前版本中，会返回false [摊手]。因为&lt;span style=&quot;color: rgb(107, 231, 72);&quot;&gt;typeof document.createElement&lt;/span&gt;返回的是&amp;quot;object&amp;quot;，而不是&amp;quot;function&amp;quot;。如前所属，&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;DOM对象是宿主对象&lt;/span&gt;，IE及更早的版本中的宿主对象是通过&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;COM&lt;/span&gt;而非&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;JScript&lt;/span&gt;实现的。因此，document.createElement（）函数确实是一个COM对象没毛病。IE9纠正了这个问题，对所有DOM方法都返回&amp;quot;function&amp;quot;。结论就是不能用typeof操作符检测IE8及之前版本的一些DOM方法。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;关于typeof的行为不标准，IE中还可以举出例子来。&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;Active对象&lt;/span&gt;（只有IE支持）与其他对象的行为差异很大。例如，&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;不使用&lt;/span&gt;typeof测试某个属性会导致错误。例子：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;var xhr = new ACtiveXObject(&amp;quot;Microsoft.XMLHttp&amp;quot;);&lt;/div&gt;&lt;div&gt;if(xhr.open){          //这里会发生错误&lt;/div&gt;&lt;div&gt;     //执行操作&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;像这样直接把函数作为属性访问会导致JavaScript错误。使用typeof操作符会靠谱一点，但IE对typeof xhr.open会返回&amp;quot;&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;unknown&lt;/span&gt;&amp;quot;。这就意味着，在浏览器环境下测试任何对象的某个特性是否存在，要使用下面这个函数：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;function isHostMethod(object,property){&lt;/div&gt;&lt;div&gt;    var t = typeof &lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;object[property]&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;    return t == &apos;function&apos;||(!!(t=&apos;object&apos; &amp;amp;&amp;amp; object[property]))||t==&apos;known&apos;;     第二个判断条件是类型要是对象，且属性存在，是对象不就存在了吗？&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;result = isHostMethod(xhr,&amp;quot;open&amp;quot;);     //false&lt;/div&gt;&lt;div&gt;result = isHostMethod(xhr,&amp;quot;foo&amp;quot;);      //false&lt;/div&gt;&lt;/div&gt;&lt;div&gt;虽然这个函数现在还算可靠，但是不能保证在未来宿主对象保持目前的实现方式不变，也不一定会模仿已有的宿主对象的行为（来达到统一）。所以这个函数，包括其他类似能力检测函数，都不能百分百保障永远可靠。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;刚刚测试了一下，Edge里没有ActiveObject对象！好奇怪，百度了一下，果然，&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;Edge不支持ActiveX&lt;/span&gt;这种老技术了！&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;9.1.2能力检测，不是浏览器检测&lt;/b&gt;&lt;/div&gt;&lt;div&gt;简而言之，不能通过判断几个特性存不存在就确定浏览器。来看这个错误的例子：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;//错误！不够具体&lt;/div&gt;&lt;div&gt;var isFirefox = !!(navigator.vendor &amp;amp;&amp;amp; navigator.vendorSub);&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;//错误！假设过头了&lt;/div&gt;&lt;div&gt;var isIE = !!(document.all &amp;amp;&amp;amp; document.uniqueID);&lt;/div&gt;&lt;/div&gt;&lt;div&gt;上面代码就是典型的&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;能力检测误用&lt;/span&gt;。以前确实可以通过检测navigator.vendor和navigator.vendorSub来确定Firefox浏览器，但是后来Safari也实现了相同的属性，于是这个方法就不能使用了。为检测IE，代码测试了document.all和document.uniqueID。这就相当于假设IE将来的版本会继续存在这两个属性，同时假设未来其他浏览器也没这两个属性，很显然这种不向未来看的检测方法确定浏览器是不靠谱的。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;实际上，&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;根据浏览器不同将能力组合起来是更可取的方式&lt;/span&gt;。如果你知道自己的应用程序需要使用哪些浏览器特性，那么一次性检测所有相关特性，不要分别检测是最好选择。例子：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;//确定是否有支持Netscape插件&lt;/div&gt;&lt;div&gt;var hasNSPlugins = !!(navigator.plugins &amp;amp;&amp;amp; navigator.plugins.length);&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;//确定是否浏览器具有DOM1级规定的能力&lt;/div&gt;&lt;div&gt;var hasDOM1 = !!(document.getElementById &amp;amp;&amp;amp; document.createElement &amp;amp;&amp;amp; document.getElementByTagName);&lt;/div&gt;&lt;/div&gt;&lt;div&gt;感觉这种代码是一口气知道自己的应用程序会用在哪才能做的能力检测吧，就是先检测，再根据能力写代码。不能根据能力的不同做出相应措施。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;总结：不要用能力检测的结果去确定用户使用的浏览器。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;9.2怪癖检测&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;与能力检测类似，&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;怪癖检测（quirks detection）&lt;/span&gt;的目标是识别浏览器的特殊行为。但与能力检测确认浏览器有什么能力不同，怪癖检测是(ˇ?ˇ) 想检查浏览器有没有什么BUG。&lt;/div&gt;&lt;div&gt;通常需要运行一段小代码来确定某特性能不能工作。例如，IE8及更早版本存在一个BUG：如果某个实例属性与&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;[[Enumerable]]&lt;/span&gt;标记为false的某个原型属性同名，那么该实例属性将不会出现在 for - in 循环中。可以用下面这段代码检测：&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &apos;Courier New&apos;, monospace; font-size: 12px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902);&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;var hasDontEnumQuirk = function(){&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;    var o = {toString : function(){}};&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;    for(var prop in o){&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;        if(prop == &amp;quot;toString&amp;quot;){&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;           &lt;/span&gt; &lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;return false;          //&lt;/span&gt;函数是检测有怪癖，return false就是没有怪癖。&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;        }&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;    }&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;    return true;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;}();&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;以上代码在局部环境创建了一个对象并重写toString（）（刻意与原型属性同名），并用 for - in循环，判断toString（）有没有在循环中，有则确定不是IE8（最好不要这样说，犯了用能力检测判断浏览器的忌讳）没这个quirks。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;还有一个怪癖在Safari 3以前的版本：会枚举被隐藏的属性（通过继承得到的属性吧）。可以用下面的代码检测：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;var hasEnumShadowQuirk = function(){&lt;/div&gt;&lt;div&gt;    var o = {toString:function(){}};&lt;/div&gt;&lt;div&gt;    var count = 0;&lt;/div&gt;&lt;div&gt;    for(var prop in o){&lt;/div&gt;&lt;div&gt;        if(prop == &amp;quot;toString&amp;quot;){&lt;/div&gt;&lt;div&gt;            count++;&lt;/div&gt;&lt;div&gt;        }&lt;/div&gt;&lt;div&gt;    }&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;    return (count &amp;gt; 1);&lt;/div&gt;&lt;div&gt;}();&lt;/div&gt;&lt;/div&gt;&lt;div&gt;枚举的时候当然没必要把toString（）、toLocalestring（）等从Object继承过来的方法枚举出来啦，所以算是被“隐藏”的属性。如果是Safari 3以前版本，就会返回两个toString的实例。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;9.3用户代理检测&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;第三种，也是&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;争议最大&lt;/span&gt;的一种客户端检测技术，叫做&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;用户代理检测&lt;/span&gt;。通过检测&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;用户代理字符串&lt;/span&gt;来确定实际使用的浏览器。在每一次&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;HTTP请求&lt;/span&gt;过程中，用户代理字符串是作为&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;响应首部&lt;/span&gt;发送的。用户代理字符串可以通过JavaScript的&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;navigator.userAgent&lt;/span&gt;属性访问。在&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;服务器端&lt;/span&gt;，通过检测用户代理字符串来确定用户使用的浏览器是常用且广为接受的做法。而在&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;客户端&lt;/span&gt;，用户代理检测被视为一种&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;万不得已&lt;/span&gt;的做法，其优先级在能力检测和怪癖检测之后。&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br/&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;9.3.1用户代理字符串的历史&lt;/b&gt;&lt;/div&gt;&lt;div&gt;用那么大篇幅讲的竟然是用户代理字符串的历史。总而言之，就是所有浏览器都为了使自己的浏览器能被服务器认可，用户代理字符串都不写自己的真实的浏览器名称，基本都叫做“Mozilla”。除了Opera的几个版本是“Opera”。但是后来Opera好像很狗地伪装成其他的浏览器。用户代理字符串还有很多其他信息，就不列出来了，因为根据浏览器版本不同，格式，显示信息都不同。（亲测当前版本的各浏览器开头都是“Mozilla5.0”）&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;9.3.2用户代理字符串检测技术&lt;/b&gt;&lt;/div&gt;&lt;div&gt;由于各种历史遗留问题，通过用户代理字符串检测浏览器不是件容易的事。因此，首先要确定你要&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;多么具体的浏览器信息&lt;/span&gt;。一般情况下，确定&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;呈现引擎&lt;/span&gt;和&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;最低限度的版本&lt;/span&gt;就能决定正确的操作方法了。&lt;/div&gt;&lt;div&gt;最好不要只为特定的浏览器版本写代码，例如：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;if(IE6 || IE7){     //不推荐&lt;/div&gt;&lt;div&gt;     //代码&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;上面显示代码在浏览器是IE6，7的时候会执行，这样的代码其实很&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;脆弱&lt;/span&gt;。因为它要依据特定的版本来做什么。如果是IE8怎么办？只要有新版本出来，代码就要随之更新。像下面这样就可以避免此问题：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;if(ieVer &amp;gt;= 6){&lt;/div&gt;&lt;div&gt;     //代码&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;上面代码检测浏览器是否是IE6及6以上。这样能确保代码将来也能起作用。下面的浏览器检测脚本就是本着这种思路写的（向后兼容？）。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;1.识别呈现引擎&lt;/b&gt;&lt;/div&gt;&lt;div&gt;我们编写的脚本主要检测五大引擎：IE、Gecko、WebKit、KHTML和Opera（Opera是呈现引擎名字？）&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;为了不在全局作用域添加多余的变量，我们使用&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;模块增强模式&lt;/span&gt;来封装检测脚本。检测脚本的基本代码结构如下：&lt;/div&gt;&lt;div style=&quot;-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;&quot;&gt;&lt;div&gt;function client = function(){&lt;/div&gt;&lt;div&gt;    var engine = {&lt;/div&gt;&lt;div&gt;     //呈现引擎&lt;/div&gt;&lt;div&gt;        ie:0,&lt;/div&gt;&lt;div&gt;        gecko:0,&lt;/div&gt;&lt;div&gt;        webkit:0,&lt;/div&gt;&lt;div&gt;        khtml:0,&lt;/div&gt;&lt;div&gt;        opera:0,&lt;/div&gt;&lt;div&gt;     //版本号&lt;/div&gt;&lt;div&gt;        ver:null&lt;/div&gt;&lt;div&gt;    };&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;    var browser = {&lt;/div&gt;&lt;div&gt;         //浏览器&lt;/div&gt;&lt;div&gt;          ie:0,&lt;/div&gt;&lt;div&gt;          firefox:0,&lt;/div&gt;&lt;div&gt;          safari:0,&lt;/div&gt;&lt;div&gt;          konq:0,&lt;/div&gt;&lt;div&gt;          opera:0,&lt;/div&gt;&lt;div&gt;          chorme:0,&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;          //具体的版本&lt;/div&gt;&lt;div&gt;          ver:null &lt;/div&gt;&lt;div&gt;     }&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;     var system = {&lt;/div&gt;&lt;div&gt;          win:false,&lt;/div&gt;&lt;div&gt;          mac:false,&lt;/div&gt;&lt;div&gt;          xll:false&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;     //移动设备&lt;/div&gt;&lt;div&gt;          iphone:false,&lt;/div&gt;&lt;div&gt;          ipod:false,&lt;/div&gt;&lt;div&gt;          ipad:false,&lt;/div&gt;&lt;div&gt;          ios:false,&lt;/div&gt;&lt;div&gt;          android:false,&lt;/div&gt;&lt;div&gt;          nokiaN:false,&lt;/div&gt;&lt;div&gt;          winMobile:false&lt;/div&gt;&lt;div&gt;     //这里是检测呈现引擎、平台和设备的代码&lt;/div&gt;&lt;div&gt;    return {&lt;/div&gt;&lt;div&gt;        engine:engine&lt;/div&gt;&lt;div&gt;        browser:browser&lt;/div&gt;&lt;div&gt;    };&lt;/div&gt;&lt;div&gt;}();&lt;/div&gt;&lt;/div&gt;&lt;div&gt;代码中的私有变量browser用于保存每个浏览器的注意属性。如果是当前使用的浏览器，则这个属性保存的是浮点数值形式的版本号。同样，ver属性中在必要时将会包含字符串形式的浏览器完整版本号。&lt;/div&gt;&lt;div&gt;对Opera和IE而言，browser对象中的值等于engine对象中的值。对Konqueror而言，browser.konq和browser.ver属性分别等于engine.khtml和engine.ver属性。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;最后的代码超级长，好多正则，看得陈某头都大。代码可以检测浏览器，平台，内核，网上也有代码。在P242。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;9.3.4使用方法&lt;/b&gt;&lt;/div&gt;&lt;div&gt;前面强调过，不到万不得已不要使用用户代理检测。用户代理检测适用于下列情形：&lt;/div&gt;&lt;div&gt;&lt;b&gt;·&lt;/b&gt;不能直接准确地使用能力检测或怪癖检测。&lt;/div&gt;&lt;div&gt;&lt;b&gt;·&lt;/b&gt;同一款浏览器在不同平台下具备不同的能力，这个时候就要确定浏览器在哪个平台。&lt;/div&gt;&lt;div&gt;&lt;b&gt;·&lt;/b&gt;为了分析跟踪等目的需要确切地知道浏览器。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;原来以前写的跨浏览器代码叫能力检测。能力检测，怪癖检测，用户代理检测统称&lt;span style=&quot;color: rgb(235, 0, 115);&quot;&gt;客户端检测&lt;/span&gt;。&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;&lt;/span&gt;
+</code></pre><p></p></span></div><p></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,382 +219,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://millionqw.github.io/2017/11/14/《JavaScript高级程序设计》-第九章-客户端检测/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/12/《JavaScript高级程序设计》-第八章-BOM/" class="archive-article-date">
-  	<time datetime="2017-11-12T02:45:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-12</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/12/《JavaScript高级程序设计》-第八章-BOM/">《JavaScript高级程序设计》 第八章 BOM</a>
-    </h1>
+  
+    <a href="/2017/11/12/《JavaScript高级程序设计》-第八章-BOM/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《JavaScript高级程序设计》 第八章 BOM</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="《JavaScript高级程序设计》-第九章-客户端检测" data-title="《JavaScript高级程序设计》 第九章 客户端检测" data-url="https://millionqw.github.io/2017/11/14/《JavaScript高级程序设计》-第九章-客户端检测/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/11/《JavaScript高级程序设计》-第七章-函数表达式/" class="archive-article-date">
-  	<time datetime="2017-11-11T07:07:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/11/《JavaScript高级程序设计》-第七章-函数表达式/">《JavaScript高级程序设计》 第七章 BOM</a>
-    </h1>
+  <div id="SOHUCS" sid="《JavaScript高级程序设计》-第九章-客户端检测" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "true"; 
+var conf = "true"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/" class="archive-article-date">
-  	<time datetime="2017-11-11T05:06:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/11/《JavaScript高级程序设计》第六章-面向对象的程序设计/">《JavaScript高级程序设计》第六章 面向对象的程序设计</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/10/《Javascript高级程序设计》-第五章-详细解释引用类型（下）/" class="archive-article-date">
-  	<time datetime="2017-07-10T14:02:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/10/《Javascript高级程序设计》-第五章-详细解释引用类型（下）/">《Javascript》高级程序设计 第五章 详细解释引用类型（下）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/07/Postcss使用体验：在未来写CSSSS/" class="archive-article-date">
-  	<time datetime="2017-07-07T12:24:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/07/Postcss使用体验：在未来写CSSSS/">Postcss使用体验：在未来写CSS</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/06/《Javascript》高级程序设计 第五章 详细解释引用类型（上）/" class="archive-article-date">
-  	<time datetime="2017-07-06T13:45:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/06/《Javascript》高级程序设计 第五章 详细解释引用类型（上）/">《Javascript》高级程序设计 第五章 详细解释引用类型（上）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/" class="archive-article-date">
-  	<time datetime="2017-07-03T04:38:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/03/《JS高级程序设计》第四章-变量、作用域和内存问题/">《JS高级程序设计》第四章 作用域和内存问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/02/第一个hexo博客终于建成/" class="archive-article-date">
-  	<time datetime="2017-07-02T13:20:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/02/第一个hexo博客终于建成/">第一个hexo博客终于建成</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/02/文章标题/" class="archive-article-date">
-  	<time datetime="2017-07-02T08:20:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/02/文章标题/">文章标题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -592,8 +353,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
