@@ -6,18 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://millionqw.github.io">
-  <title>Archives: 2017/12 | Million</title>
+  <title>《JavaScript高级程序设计》 错误处理与调试 | Million</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="广东金融学院15级，前端打字员">
-<meta name="keywords" content="前端,js,javascript,html5,css3,开发者,程序猿,编程,开源,Developer,Programmer,Coder,html,css">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Million">
-<meta property="og:url" content="https://millionqw.github.io/archives/2017/12/index.html">
+  <meta name="description" content="目录17.1浏览器报告的错误17.1.1IE17.1.2Firefox17.1.3Safari17.1.4Opera17.1.5Chrome17.2错误处理17.2.1try-catch语句1.finally子句2.错误类型（RangeError、SyntaxError等错误类型）3.合理使用try-catch语句17.2.2抛出错误1.抛出错误的时机2.抛出错误与使用try-catch语句17.">
+<meta name="keywords" content="前端,高程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《JavaScript高级程序设计》 错误处理与调试">
+<meta property="og:url" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章 错误处理与调试/index.html">
 <meta property="og:site_name" content="Million">
-<meta property="og:description" content="广东金融学院15级，前端打字员">
+<meta property="og:description" content="目录17.1浏览器报告的错误17.1.1IE17.1.2Firefox17.1.3Safari17.1.4Opera17.1.5Chrome17.2错误处理17.2.1try-catch语句1.finally子句2.错误类型（RangeError、SyntaxError等错误类型）3.合理使用try-catch语句17.2.2抛出错误1.抛出错误的时机2.抛出错误与使用try-catch语句17.">
+<meta property="og:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image.png">
+<meta property="og:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image%20[1].png">
+<meta property="og:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image%20[2].png">
+<meta property="og:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image%20[3].png">
+<meta property="og:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image%20[4].png">
+<meta property="og:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image%20[5].png">
+<meta property="og:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image%20[6].png">
+<meta property="og:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image%20[7].png">
+<meta property="og:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image%20[8].png">
+<meta property="og:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image%20[9].png">
+<meta property="og:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image%20[10].png">
+<meta property="og:updated_time" content="2017-12-10T02:59:35.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Million">
-<meta name="twitter:description" content="广东金融学院15级，前端打字员">
+<meta name="twitter:title" content="《JavaScript高级程序设计》 错误处理与调试">
+<meta name="twitter:description" content="目录17.1浏览器报告的错误17.1.1IE17.1.2Firefox17.1.3Safari17.1.4Opera17.1.5Chrome17.2错误处理17.2.1try-catch语句1.finally子句2.错误类型（RangeError、SyntaxError等错误类型）3.合理使用try-catch语句17.2.2抛出错误1.抛出错误的时机2.抛出错误与使用try-catch语句17.">
+<meta name="twitter:image" content="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章%20错误处理与调试/第十七章%20错误处理与调试_files/Image.png">
   
     <link rel="alternative" href="/atom.xml" title="Million" type="application/atom+xml">
   
@@ -149,36 +162,59 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-《JavaScript高级程序设计》-第十七章 错误处理与调试" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      《JavaScript高级程序设计》 错误处理与调试
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/10/《JavaScript高级程序设计》-第十七章 错误处理与调试/" class="archive-article-date">
+
+        
+        <a href="/2017/12/10/《JavaScript高级程序设计》-第十七章 错误处理与调试/" class="archive-article-date">
   	<time datetime="2017-12-10T02:55:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/10/《JavaScript高级程序设计》-第十七章 错误处理与调试/">《JavaScript高级程序设计》 错误处理与调试</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div><br><span><div><span style="font-size: 15px;"><b>目录</b></span></div><div><b>17.1浏览器报告的错误</b></div><div style="margin-left:40px;">17.1.1IE</div><div style="margin-left:40px;">17.1.2Firefox</div><div style="margin-left:40px;">17.1.3Safari</div><div style="margin-left:40px;">17.1.4Opera</div><div style="margin-left:40px;">17.1.5Chrome</div><div><b>17.2错误处理</b></div><div style="margin-left:40px;">17.2.1try-catch语句</div><div style="margin-left:80px;">1.finally子句</div><div style="margin-left:80px;">2.错误类型（RangeError、SyntaxError等错误类型）</div><div style="margin-left:80px;">3.合理使用try-catch语句</div><div style="margin-left:40px;">17.2.2抛出错误</div><div style="margin-left:80px;">1.抛出错误的时机</div><div style="margin-left:80px;">2.抛出错误与使用try-catch语句</div><div style="margin-left:40px;">17.2.3错误（error）事件</div><div style="margin-left:40px;">17.2.4处理错误的策略</div><div style="margin-left:40px;">17.2.5常见的错误类型</div><div style="margin-left:80px;">1.类型转换错误</div><div style="margin-left:80px;">2.数据类型错误</div><div style="margin-left:40px;">          3.通信错误</div><div style="margin-left:40px;">17.2.6区分致命错误和非致命错误</div><div style="margin-left:40px;">17.2.7把错误记录到服务器</div><div><b>17.3调试技术</b></div><div style="margin-left:40px;">17.3.1将信息记录到控制台</div><div style="margin-left:40px;">17.3.2将消息记录到当前页面</div><div style="margin-left:40px;">17.3.3抛出错误</div><div><b>17.4常见的IE错误</b></div>
 
-        <div class="article-info info-on-right">
-          
+
+<a id="more"></a>
+<div><br></div><div>由于JavaScript本身是<span style="color: rgb(235, 0, 115);">动态语言</span>，而且多年来一直没有固定的开发工具，因此人们普遍认为它是一种最难于调试的编程语言。脚本出错时，浏览器通常会给出类似于“object expected（缺少对象）”这样的消息，没有上下文消息，让人摸不着头脑。ECMAScript第3版致力于解决这个问题，专门引入了try-catch和throw语句以及一些<span style="color: rgb(235, 0, 115);">错误类型</span>（引入一些错误类型，有意思哈哈哈），意在让开发人员能够适当地处理错误。几年之后，Web浏览器中也出现了一些JavaScript调试程序和工具。2008年以来，大多数Web浏览器都已经具备了一些调试JavaScript代码的能力。</div><div>在有了语言特性和工具支持之后，现在的开发人员已经能够适当地实现错误处理，并且能够找到错误的<span style="color: rgb(235, 0, 115);">根源</span>。</div><div><br></div><div><span style="font-size: 15px;"><b>17.1浏览器报告的错误</b></span></div><div><br></div><div><b>17.1.1IE</b></div><div>就是说IE是唯一一个会在浏览器的界面窗体（chrome，名词窗体的英文，不是Chrome浏览器），然后你想让IE弹出多少内容，要怎么设置，开启了脚本调试功能会有什么效果。说的不知道是多少代以前的IE了。直接贴：</div><div><img src="第十七章 错误处理与调试_files/Image.png" type="image/png" data-filename="" style="height: auto;"></div><div><img src="第十七章 错误处理与调试_files/Image [1].png" type="image/png" data-filename="" style="height: auto;"></div><div><br></div><div><br></div><div><b>17.1.2Firefox</b></div><div>介绍Firefox不会把错误通过浏览器界面显示出来，会把错误记录到控制台中。然后介绍了Firebug。但是现在Firebug Firefox都已经停止维护了，昨晚刚下了个Firefox开发者版本。</div><div><br></div><div><b>17.1.3Safari</b></div><div>介绍JavaScript错误要在哪里查看。</div><div><br></div><div><b>17.1.4Opera</b></div><div>内容跟上面的同。怎么设置让Opera显示错误信息，怎么设置让Opera在JavaScript错误时弹出错误控制台。</div><div><br></div><div><b>17.1.5Chrome</b></div><div>经常在用的Web Inspector控制台。</div><div><br></div><div><span style="font-size: 15px;"><b>17.2错误处理</b></span></div><div>阐述了错误处理的重要性。作为开发人员，我们必须理解在处理JavaScript错误的时候，都有哪些手段和工具可以利用。</div><div><br></div><div><b>17.2.1try-catch语句</b></div><div><span style="color: rgb(235, 0, 115);">ECMA-262第3版</span>引入了try-catch语句。作为JavaScript中处理异常的一种标准方式。基本的语法如下所示，与Java中的try-catch语句是完全相同的：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>try{</div><div>     //可能会导致错误的代码</div><div>} catch(error){</div><div>     //在错误发生时怎么处理</div><div>}</div></div><div>也就是说，我们应该把所有可能会<span style="color: rgb(235, 0, 115);">抛出错误的代码</span>放在try语句块中，把那些<span style="color: rgb(235, 0, 115);">用于错误处理的代码</span>放在catch块中。例如：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>try{</div><div>     window.someNonexistentFunction();</div><div>} catch(error){</div><div>     console.log(&quot;An error happened&quot;);</div><div>}</div></div><div><br></div><div>如果try块中的任何代码发生了错误，就会立即退出代码执行过程，然后接着执行catch块。此时，catch块会接收到一个包含错误信息的对象。<span style="color: rgb(235, 0, 115);">与在其他语言中不同的是</span>，即使你不想使用这个错误对象，也要给它起个名字（就是例子中catch块的参数erroe）。这个对象中包含的实际信息会<span style="color: rgb(235, 0, 115);">因浏览器而异</span>，但共同的是有一个保存着<span style="color: rgb(235, 0, 115);">错误消息</span>的<span style="color: rgb(235, 0, 115);">message属性</span>。ECMA-262还规定了一个保存<span style="color: rgb(235, 0, 115);">错误类型</span>的<span style="color: rgb(235, 0, 115);">name属性</span>；当前所有浏览器都支持这个属性（Opera 9之前的版本不支持这个属性）。因此，在发生错误时，就可以像下面这样实事求是地显示浏览器给出的消息。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>try{</div><div>     window.someNonexistentFunction();</div><div>} catch(error){</div><div>     console.log(error.message);</div><div>}</div></div><div>这个例子在向用户显示错误消息时，使用了<span style="color: rgb(235, 0, 115);">错误对象</span>的<span style="color: rgb(235, 0, 115);">message属性</span>。这个message属性是唯一一个能够保证所有浏览器都支持的属性，除此之外，IE、Firefox、Safari、Chrome以及Opera都为事件对象添加了其他相关信息。IE添加了与message属性完全相同的description属性（喵喵喵？），还添加了保存着内部错误数量的number属性。Firefox添加了fileName、lineNumber和stack（包含栈跟踪信息）属性，Safari添加了line（表示分号）、sourceId（表示内部错误代码）和sourceURL属性。当然，在跨浏览器编程时，最好还是只使用message属性。（那有何用，jQuery可能有兼容的方法吧）</div><div><br></div><div><b>1.finally子句（设置了必执行）</b></div><div>虽然在try-catch语句中是<span style="color: rgb(235, 0, 115);">可选的</span>，但finally子句一经使用，其代码<span style="color: rgb(235, 0, 115);">无论如何都会执行</span>。换句话说，try语句块中的代码全部正常执行，finally子句会执行；如果因为出错而执行了catch语句块，finally子句也会执行。甚至try或catch语句块中包含return语句，都不会执行finally子句的执行。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>function testFinally(){</div><div>     try{</div><div>          return 2;</div><div>     } catch(error){</div><div>          return 1;</div><div>     } finally{</div><div>          return 0;</div><div>     }</div><div>}</div></div><div>这个函数在try-catch语句的每一部分都放了一条return语句，表面上看，调用这个函数会返回2，因为try语句并没有出错，可是，由于最后还有一个finally子句，结果就会导致该return语句被忽略；也就是说，调用这个函数只能返回0。除非把finally语句拿掉，这个函数才会返回2。</div><div><br></div><div>如果提供finally子句，则catch子句就成了可选的（两个中选一个就好）。IE7及更早的版本有一个bug：除非有catch子句，否则finally中的代码永远不会执行。既然这么说了，如果要兼容到IE7，那catch语句即使里面什么都不写，那也要提供一个catch语句的。</div><div><br></div><div>✎：请读者务必记住，只要代码中包含finally子句，那么无论try还是catch语句块中的return语句都将忽略。因此，在使用finally子句之前，一定要非常清楚<span style="color: rgb(235, 0, 115);">你想让代码怎么样</span>。（很喜欢最后一句话，所以抄下来）</div><div><br></div><div><b>2.错误类型</b></div><div>执行代码期间可能会发生的错误有多种类型。<span style="color: rgb(235, 0, 115);">每种错误都有对应的错误类型</span>，而当错误发生时，就会抛出<span style="color: rgb(235, 0, 115);">相应类型的错误对象</span>。ECMA-262定义了下列7中错误类型：</div><div><b>·</b>Error</div><div><b>·</b>EvalError</div><div><b>·</b>RangeError</div><div><b>·</b>ReferenceError</div><div><b>·</b>SyntaxError</div><div><b>·</b>TypeError</div><div><b>·</b>URIError</div><div>（写JavaScript弹出的那几种错误都在这里了）</div><div>其中，Error是基类型，其他默认错误类型都<span style="color: rgb(235, 0, 115);">继承自该类型</span>。因此，<span style="color: rgb(235, 0, 115);">所有错误类型<span style="color: rgb(209, 0, 255);">共享</span>了一组相同的属性</span>（错误对象中的方法全是默认的对象方法）。Error类型的错误很少见，如果有也是浏览器抛出的；这个基类型的主要目的是共开发人员抛出<span style="color: rgb(235, 0, 115);">自定义错误</span>（是通过实例化这个对象来自定义错误吗？）。</div><div><br></div><div><span style="color: rgb(235, 0, 115);">EvalError类型</span>的错误会在使用<span style="color: rgb(235, 0, 115);">eval（）函数</span>而发生异常时抛出。ECMA-262中对这个错误有如下描述：“如果以非直接调用的方式使用eval属性的值（换句话说，没有明确地将其名称作为一个Identifier（是什么？标识符？百度了下是的），即用作CallExpression中的MemberExpression），或者为eval属性赋值。”简单地说，如果没有把eval（）当成函数调用，就会抛出错误。（简单粗暴，专门为这个函数设置一种错误类型，这个函数是有多屌）例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>new eval();     //抛出EvalError</div><div>eval = foo;     //抛出EvalError</div></div><div>然而尴尬的是Firefox，Chrome等浏览器抛出的都不是EvalError类型的错误，没看书后面写的就去试了，后面书里也这么说了，更多的是抛出TypeError。</div><div>而第二种情况也不会报错，而是被成功执行，书也说了，不会发生错误。</div><div>有鉴于此，加上在实际开发中极少会这样使用eval（），所以遇到这种错误类型的可能性极小（怕是根本遇不到哟）。</div><div><br></div><div><span style="color: rgb(235, 0, 115);">RangeError类型</span>的错误会在<span style="color: rgb(235, 0, 115);">数值超出相应范围时</span>触发。例如，在定义数组时，如果指定了数组不支持的项数（如-20或Nuber.MAX_VALUE），就会触发这种错误。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>var items1 = new Array(-20);                 //抛出RangeError</div><div>var items2 = new Array(Number.MAX_VALUE)     //抛出RangeError</div></div><div>不是说数组里不能存-20这个数，而是<span style="color: rgb(235, 0, 115);">用Array构造函数定义一个数组，里面如果只有一个数字型参数的话，这个数字是表示数组长度的</span>，所以显然，-20会报错。</div><div><br></div><div><span style="color: rgb(235, 0, 115);">ReferenceError类型</span>的错误，在找不到对象的情况下会发生（这种情况下，会直接导致人所共知的“object expected”浏览器错误（然而我是第一次听说这个错误））。通常，在访问不存在的变量时，就会发生这种错误。例如：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>var obj = x;     //在x并未声明的情况下抛出ReferenceError</div></div><div>其实浏览器在抛出错误类型的时候，并不止告诉我们是什么类型的错误，后面往往还有一段话详细地告诉你是什么错。想来错误类型可以用于JavaScript代码中，用于当分别出现什么类型的错误时采取什么措施吧。</div><div><br></div><div>至于<span style="color: rgb(235, 0, 115);">SyntaxError</span>，当我们把语法错误的JavaScript字符串传入eval（）函数时，就会导致此类错误。例如：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>eval(&quot;a ++ b&quot;);     //抛出SyntaxError</div></div><div>如果语法错误的代码出现在eval（）函数之外，则不太可能使用SyntaxError，因为此时的语法错误会导致JavaScript立即停止运行。</div><div><span style="color: rgb(235, 0, 115);">亲测</span>是抛出了SyntaxError，不过不是每一个都是，比如Edge报的错竟然是缺少分号。如果语法错误出现在eval（）函数之外，也有浏览器会报语法错误，有Firefox和Safari。</div><div><br></div><div><span style="color: rgb(235, 0, 115);">TypeError类型</span>在JavaScript中会经常用到，在<span style="color: rgb(235, 0, 115);">变量中保存着意外的类型</span>时，或者在<span style="color: rgb(235, 0, 115);">访问不存在的方法</span>时，都会导致这种错误。错误的原因虽然多种多样，但归根结底还是由于在执行特定于类型的操作时，变量的类型并不符合要求所致。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>var o = new 10;                  //抛出TypeError</div><div>console.log(&quot;name&quot; in true);     //抛出TypeError</div><div>Function.prototype.toString.call(&quot;name&quot;);          //抛出TypeError<br></div></div><div>最常发生类型错误的情况，就是传递给函数的参数事先未经检查，结果传入类型与预期类型不相符。</div><div><br></div><div><span style="color: rgb(235, 0, 115);">URIError错误</span>在使用encodeURI（）或decodeURI（），而URI格式不正确时就会发生。这种错误很少见，因为前面说的这两个函数的容错性非常高。</div><div><br></div><div>利用不同的错误类型，可以获悉更多有关异常的信息，从而有助于对错误做出恰当的处理。要想知道错误的类型，可以像下面这样在try-catch语句的catch语句中使用<span style="color: rgb(235, 0, 115);">instanceof操作符</span>。</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>try{</div><div>    someFunction();</div><div>} catch(error) {</div><div>    if(error instanceof TypeError){</div><div>        //处理类型错误</div><div>    } else if (error instanceof ReferenceError){</div><div>        //处理引用错误</div><div>    } else {</div><div>        //处理其他类型的错误</div><div>    }</div><div>}</div></div><div><br></div><div>在跨浏览器编程中，检查错误类型是确定处理方式的最简便途径；包含在message属性中的错误消息会因浏览器而异。</div><div><br></div><div><b>3.合理使用try-catch</b></div><div>当try-catch语句中发生错误时，浏览器会认为错误已经被处理了，因为不会通过本章前面讨论的机制记录或报告错误。对于那些不要求用户懂技术，也不需要用户理解错误的Web应用程序，这应该说是个理想的结果。不过，try-catch能够让我们实现自己的错误处理机制。</div><div><br></div><div>使用try-catch最适合处理那些我们无法控制的错误。假设你在<span style="color: rgb(235, 0, 115);">使用一个大型JavaScript库中的函数</span>，该函数可能会有意无意地抛出一些错误。由于我们不能修改这个库的源代码，所以大可将对该函数的调用放在try-catch语句中，万一有什么错误发生，也好恰当地处理它们。</div><div><br></div><div>在<span style="color: rgb(235, 0, 115);">明明白白</span>地知道自己的代码会发生错误时，再使用try-catch语句就不太合适了。例如，如果传递给函数的参数是字符串而非数值，就会造成函数出错，那么就应该先检查参数的类型，然后再决定如何去做。在这种情况下，不应用try-catch语句。</div><div><br></div><div><b>17.2.2抛出错误</b></div><div>与try-catch语句相配的还有一个<span style="color: rgb(235, 0, 115);">throw操作符</span>，用于<span style="color: rgb(235, 0, 115);">随时</span>抛出<span style="color: rgb(235, 0, 115);">自定义错误</span>。抛出错误时，必须要给throw操作符一个值，这个值是什么类型，没有要求。下列代码都是有效的：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>throw 12345;</div><div>throw &quot;Hello world&quot;;</div><div>throw true;</div><div>throw {name:&quot;Javascript&quot;};</div></div><div>在遇到throw操作符时，代码会立即停止执行。仅<span style="color: rgb(235, 0, 115);">当有try-catch语句捕获到被抛出的值时</span>（怎么捕获？），代码才会继续执行。</div><div><br></div><div>通过使用某种内置错误类型，可以更真实地模拟浏览器错误。每种错误类型的构造函数接收一个参数，即实际的错误消息。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>throw new Error(&quot;Something bad happened&quot;);</div></div><div>这行代码抛出了一个通用错误，带有一条自定义错误消息。浏览器会像处理自己生成的错误一样，来处理这行代码抛出的错误。换句话说，浏览器会以常规方式报告这一错误，并且会显示这里的自定义错误消息。（<span style="color: rgb(235, 0, 115);">人为制造错误</span>）</div><div><br></div><div>像下面使用其他错误类型，也可以模拟出类似的浏览器错误：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>throw new SyntaxError(&quot;I don’t like your syntax.&quot;);</div><div>throw new TypeError(&quot;What type of variavle do you take me for?&quot;);</div><div>throw new RangeError(&quot;You just don’t have the range.&quot;);</div><div>throw new EvalError(&quot;That doesn’t evaluate.&quot;);</div><div>throw new URIError(&quot;Uri,is that you?&quot;);</div><div>throw new ReferenceError(&quot;You didn’t cite your reference proper.&quot;);</div></div><div><br></div><div>在创建自定义错误消息时最常用的错误类型是Error、RangeError、ReferenceError和TypeError。</div><div><br></div><div>另外，利用<span style="color: rgb(235, 0, 115);">原型链</span>还可以通过继承Error来创建自定义错误类型。此时，需要为新创建的错误类型指定name和message属性。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>function CustomError(message){</div><div>     this.name = &quot;CustomError&quot;;</div><div>     this.message = message;</div><div>}</div><div><br></div><div><span style="color: rgb(235, 0, 115);">CustomError.prototype = new Error();</span></div><div>throw new CustomError(&quot;My message&quot;);</div></div><div>浏览器对待继承自Error的自定义错误类型，就像对待其他错误类型一样，如果要捕获自己抛出的错误并且把它与浏览器错误区别对待的话，创建自定义错误是很有用的。</div><div><br></div><div>✎：IE只有在抛出Error对象的时候会显示自定义的错误消息。对于其它类型，它都无一例外地显示“exception thrown and not caught”（抛出了异常，且未被捕获）。</div><div><br></div><div><b>1.抛出错误的时机</b></div><div>要针对函数为什么会执行失败给出更多信息，抛出自定义错误是一种很方便的方式。应该在出现某种特定的已知错误条件，导致函数无法正常执行时抛出错误。换句话说，浏览器会在某种特定的条件下执行函数时抛出错误。例如，下面的函数会在参数不是数组的情况下失败：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>function process(values){</div><div>    values.sort();                    //sort()是数组方法，给非数组使用就会报错</div><div><br></div><div>    for(var i=0,len=values.length; i&lt;len; i++){</div><div>        if (values[i] &gt; 100) {</div><div>            return values[i];</div><div>        }</div><div>    }</div><div><br></div><div>    return -1;</div><div>}</div></div><div>如果执行这个函数时传给它一个字符串参数，那么对sort（）的调用就会失败。为此，不同浏览器会给出不同的错误消息，但都不是特别明确，如下所示：</div><div><img src="第十七章 错误处理与调试_files/Image [2].png" type="image/png" data-filename="" style="height: auto;"></div><div><br></div><div>尽管Firefox、Chrome和Safari都明确地提出了代码中导致错误的部分，但错误消息并没有清楚地告诉我们到底出了什么问题，该怎么修复问题。在处理类似前面例子中的那个函数时，通过调试处理这些错误消息没有什么困难。但是，在面对包含数千行JavaScript代码的复杂的Web应用程序时，要想查找错误来源就没有那么容易了。在这种情况下，带有适当消息的自定义错误能够显著提示代码的可维护性。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>function process(values){</div><div>    if (!(value instanceof Array)) {</div><div>        <span style="color: rgb(235, 0, 115);">throw new Error(&quot;process():Argument must be array.&quot;)</span>;</div><div>    }</div><div><br></div><div>    values.sort();</div><div><br></div><div>    for(var i=0,len=value.length; i&lt;len; i++){</div><div>        if (values[i] &gt; 100) {</div><div>            return values[i];</div><div>        }</div><div>    }</div><div>    return -1;</div><div>}</div></div><div>这种应该是帮助开发人员调试代码的吧。</div><div>重写这个函数后，如果values参数不是数组，就会抛出一个错误。错误消息中包含了函数的名称，以及为什么会发生错误的明确描述。如果一个复杂的Web应用程序发生了这个错误，那么查找问题的根源就容易多了。</div><div><br></div><div>建议读者在开发JavaScript代码的过程中，重点关注函数和可能导致函数执行失败的因素。<span style="color: rgb(235, 0, 115);">良好的<span style="color: rgb(209, 0, 255);">错误处理机制</span>应该可以确保代码<span style="color: rgb(209, 0, 255);">只发生你自己抛出的错误</span></span>。</div><div><br></div><div>✎：在多框架环境下使用instanceof来检测数组有一些问题，详细内容参考22.11节。</div><div><br></div><div><b>2.抛出错误与使用try-catch</b></div><div><img src="第十七章 错误处理与调试_files/Image [3].png" type="image/png" data-filename="" style="height: auto;"></div><div>说道抛出错误与捕获错误，我们认为<span style="color: rgb(235, 0, 115);">只应该捕获那些你确切地知道该如何处理的错误</span>。<span style="color: rgb(235, 0, 115);">捕获错误的目的</span>在于避免浏览器以默认方式处理他们；而<span style="color: rgb(235, 0, 115);">抛出错误（throw）的目的在</span>于提供错误发生具体原因的消息。（<span style="color: rgb(235, 0, 115);">抛出错误的作用只有一个：提供消息</span>，告诉开发人员错在哪）</div><div><br></div><div><b>17.2.3错误（error）事件</b></div><div>任何没有通过try-catch处理的错误都会触发window对象的<span style="color: rgb(235, 0, 115);">error事件</span>。这个事件是Web浏览器最早支持的事件之一，IE、Firefox和Chrome为保持向后兼容，并没有对这个事件作任何修改（<span style="color: rgb(235, 0, 115);">Opera和Safari不支持error事件</span>）。在任何Web浏览器中，<span style="color: rgb(235, 0, 115);">onerror事件处理程序都不会创建event对象</span>。</div><div><br></div><div>但它可以接收三个参数：错误消息、错误所在的URL和行号。在多数情况下， 只有错误消息有用，因为URL只是给出了文档的位置，而行号所指的代码行既可能出自嵌入的JavaScript代码，也可能出自外部的文件。要指定onerror事件处理程序，必须使用如下所示的DOM0级技术，<span style="color: rgb(235, 0, 115);">它没有遵循“DOM2级事件的标准格式”</span>（前面写EventUtil的addHandler还说几乎没有事件会到达DOM0级技术那个语句块，error事件就是一个了）。</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>window.onerror = function(message,url,line){</div><div>     console.log(message);</div><div>     return false;</div><div>}</div></div><div>只要发生错误，无论是不是浏览器生成的，都会触发error事件，并执行这个事件处理程序。然后，浏览器默认的机制发生作用，像往常一样显示出错误消息。像下面这样在事件处理程序中返回false，可以阻止浏览器报告错误的默认行为：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>window.onerror = function(message,url,line){</div><div>     console.log(message);</div><div>     <span style="color: rgb(235, 0, 115);">return false</span>;</div><div>}</div></div><div>通过返回false，这个函数实际上就充当了整个文档中的try-catch语句，可以捕获所有无代码处理的运行错误。这个事件处理程序是避免浏览器报告错误的<span style="color: rgb(235, 0, 115);">最后一道防线</span>，理想情况下，只要可能就不应该使用它。只要能够适当地使用try-catch语句，就不会有错误交给浏览器，也就不会触发error事件。</div><div>自己的理解：可以理解成浏览器报错也是onerror事件的一部分，本来应该在onerror执行的，但被直接return false了就没有执行。只能说这么理解。</div><div><br></div><div><img src="第十七章 错误处理与调试_files/Image [4].png" type="image/png" data-filename="" style="height: auto;"></div><div><br></div><div>图像也支持error事件。只要图像的src特性中的URL不能返回可以被识别的图像格式，就会触发error事件。此时的error事件遵循DOM格式，会返回一个以图像为目标的event对象。下面是一个例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>var image = new Image();</div><div>EventUtil.addHandler(image,&quot;load&quot;,function(event){</div><div>    console.log(&quot;Image loaded&quot;);</div><div>})</div><div>EventUtil.addHandler(image,&quot;error&quot;,function(event){</div><div>    console.log(&quot;Image not loaded&quot;);</div><div>})</div><div>image.src = &quot;smilex.gif&quot;;        //指定不存在的文件</div></div><div><br></div><div>需要注意的是，发生error事件时，图像下载过程已经结束，也就是说<span style="color: rgb(235, 0, 115);">不能重新下载了</span>。（那可以换一个src地址载入另一张图像吗）</div><div><br></div><div><b>17.2.4处理错误的策略</b></div><div><img src="第十七章 错误处理与调试_files/Image [5].png" type="image/png" data-filename="" style="height: auto;"></div><div><img src="第十七章 错误处理与调试_files/Image [6].png" type="image/png" data-filename="" style="height: auto;"></div><div><br></div><div><b>17.2.5常见的错误类型</b></div><div>错误处理的核心，是首先要知道代码里会发生什么错误，由于JavaScript是<span style="color: rgb(235, 0, 115);">松散类型</span>的，而且也不会验证函数的参数，因此<span style="color: rgb(235, 0, 115);">错误只会在代码运行期间出现</span>（不像Java写一半就能报错）。一般来说，需要关注三种错误：</div><div><b>·</b>类型转换错误</div><div><b>·</b>数据类型错误</div><div><b>·</b>通信错误</div><div>以上错误分别在特定的模式下或者没有对值进行足够的检查的情况下发生。</div><div><br></div><div><b>1.类型转换错误</b></div><div>类型转换错误发生在使用某个操作符，或者使用其他可能会自动转换值的数据类型的语言结构时。在使用相等（==）和不相等（！=）操作符，或者在if、for及while等流控制语句中使用非布尔值时，最常发生类型转换错误。</div><div><br></div><div>第三章讨论相等和不相等操作符在执行比较之前会先转换不同类型的值。由于在<span style="color: rgb(235, 0, 115);">非动态语言</span>（JavaScript是动态语言）中，开发人员都使用相同的符号执行直观的比较，因此在JavaScript中往往也会以相同方式错误地使用它们。多数情况下，我们建议使用<span style="color: rgb(235, 0, 115);">全等（===）</span>和<span style="color: rgb(235, 0, 115);">不全等（！==）操作符</span>，以避免类型转换。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>console.log(5 == &quot;5&quot;);        //true</div><div>console.log(5 === &quot;5&quot;);       //false</div><div>console.log(1 == true);       //true</div><div>console.log(1 === true);      //false</div></div><div>使用相等操作符首先会将数值5转成字符串“5”，然后与另一个字符串“5”比较，结果是true。全等操作符知道要比较的是两种不同的数据类型，因为直接返回false。对于1和true也是如此。</div><div>使用全等和非醛等操作符可以避免因为使用相等和不相等操作符引发的<span style="color: rgb(235, 0, 115);">类型转换错误</span>，因此作者强烈推荐使用。</div><div><br></div><div>容易发生类型转换错误的另一个地方，就是流程控制语句。像if之类的语句在确定下一步操作之前，会自动把任何值转换成布尔值。尤其是if语句，如果使用不当，最容易出错。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>function concat(str1,str2,str3){</div><div>    var result = str1 + str2;</div><div>    if (str3) {                <span style="color: rgb(235, 0, 115);">//绝对不要这样！</span></div><div>        result += str3;</div><div>    }</div><div>    return result;</div><div>}</div></div><div>这个函数的用意是拼接两或三个字符串，然后返回结果。其中，第三个字符串是可选的，因此必须要检查。第三章介绍过，<span style="color: rgb(235, 0, 115);">未使用过的命名变量会自动被赋予undefined值</span>。而undefined指可以被转换成布尔值false，因此这个函数中的if语句实际上只适用于提供了第三个参数的情况。<span style="color: rgb(235, 0, 115);">问题在于</span>，不止undefined会被转换成false，如果第三个参数是数值0，那么if语句也会返回分false。</div><div><br></div><div>在流程控制语句中使用非布尔值，是极为常见的一个错误来源。为避免此错误，就要做到<span style="color: rgb(235, 0, 115);">在条件比较时切实传入布尔值</span>。实际上，执行某种形式的比较就可以达到这个目的。例如：我们可以将前面的函数重写如下：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>function concat(str1,str2,str3){</div><div>    var result = str1 + str2;</div><div>    if (typeof str3 == &quot;string&quot;) {                //恰当的比较</div><div>        result += str3;</div><div>    }</div><div>    return result;</div><div>}</div></div><div>在这个重写后的函数中，if语句的条件会基于比较返回一个布尔值。这个函数相对可靠得多，不容易受非正常值的影响。</div><div><br></div><div><b>2.数据类型错误</b></div><div>JavaScript是松散类型的，也就是说，在使用变量和函数参数之前，不会对它们进行比较以确保它们的数据类型正确。为了保证不会发生数据类型错误，只能依靠开发人员<span style="color: rgb(235, 0, 115);">编写适当的数据类型检测代码</span>。在将预料之外的值传递给函数的情况下，最容易发生数据类型错误。</div><div><br></div><div>在前面的例子中，通过检测俄第三个参数可以确保它是一个字符串，但并没有检测另外两个参数。如果该函数必须要返回一个字符串，那么只要给它传入两个数值，忽略第三个参数，就可以轻易地导致它的执行结果错误。类似的情况也存在于下面这个函数中：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>//不安全的函数，任何非字符串值都会导致错误</div><div>function getQueryString(url){</div><div>    var pos = url.indexOf(&quot;?&quot;);</div><div>    if (pos &gt; -1) {</div><div>        return url.substring(pos+1);</div><div>    }</div><div>    return &quot;&quot;;</div><div>}</div></div><div>这个函数的用意是返回给定URL中的查询字符串。为此，它首先使用indexOf（）寻找字符串中的问号。如果找到了，利用substring（）方法返回问号后面的所有字符串。这个例子中的两个函数（indexof（）和substring（））只能操作字符串，因此只要传入其他数据类型的值就会导致错误。而添加一条简单的类型检测语句，就可以确保函数不那么容易出错。</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>function getQueryString(url){</div><div>    if (<span style="color: rgb(235, 0, 115);">typeof url == &quot;string&quot;</span>) {          //通过检查类型确保安全</div><div>        var pos = url.indexOf(&quot;?&quot;);</div><div>        if (pos &gt; -1) {</div><div>            return url.substring(pos+1);</div><div>        }</div><div>    }</div><div>    return &quot;&quot;;</div><div>}</div></div><div>重写后的这个函数首先检查了传入的值是不是字符串。这样，就确保了不会因为接收到非字符串值而导致错误。</div><div><br></div><div>前一节提到过，在溜控制语句中使用非布尔值作为条件很容易导致类型转换错误。同样，这样做也经常会导致数据类型错误。来看下面的例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>//不安全的函数，任何非数组值都会导致错误</div><div>function reverseSort(values){</div><div>    if (values) {                <span style="color: rgb(235, 0, 115);">//绝对不要这样！</span></div><div>        values.sort();</div><div>        values.reverse();</div><div>    }</div><div>}</div></div><div>这个reverseSort（）函数可以将数组反向排序，其中用到了sort（）和reverse（）方法。对于 if 语句中的控制条件而言，任何会转换为true的非数组都会导致错误。另一个常见的错误就是将参数与null值进行比较，如下所示：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>//不安全的函数，任何非数组值都会导致错误</div><div>function reverseSort(values){</div><div>    if (values != null) {        <span style="color: rgb(235, 0, 115);">//绝对不要这样！</span></div><div>        values.sort();</div><div>        values.reverse();</div><div>    }</div><div>}</div></div><div>与null进行比较只能确保相应的值不是null和undefined（这就相当于使用相等和不相等操作）。要确保传入的值有效，仅检测null是不够的，因此，不应该使用这种技术。同样，我们也不推荐将某个值与undefined作比较。</div><div><br></div><div>另一种错误的做法，就是只针对要使用的某一特性执行特性检测。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>//不安全的函数，任何非数组值都会导致错误</div><div>function reverseSort(values){</div><div>    if (typeof values.sort == &quot;function&quot;) {        //<span style="color: rgb(235, 0, 115);">绝对不要这样！</span></div><div>        values.sort();</div><div>        values.reverse();</div><div>    }</div><div>}</div></div><div>这个例子中，代码先检测了参数中是否存在sort（）方法。这样，如果传入一个包含sort（）方法的对象（而不是数组）当然也会通过检测，但在调用reverse（）函数时可能就会出错了。在确切知道应该传入什么类型的情况下，最好是使用instanceof操作符来检测其数据类型。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>//安全，非数值将被忽略</div><div>function reverseSort(values){</div><div>    if (values instanceof Array) {        //问题解决了</div><div>        values.sort();</div><div>        values.reverse();</div><div>    }</div><div>}</div></div><div>其实就是直接判断传入的参数的数据类型是不是你要的那个数据类型，不要整花里胡哨的。</div><div><br></div><div>大体上说，基本类型的值应该使用typeof来检测，而对象的值应该使用instanceof来检测。根据使用函数的方式，有时候并不需要逐个检测所有参数的数据类型。但是，<span style="color: rgb(235, 0, 115);">面向公众的API</span>则必须无条件地执行类型检查，以确保函数始终能够正常地执行。</div><div><br></div><div><b>3.通信错误</b></div><div>随着Ajax编程的兴起（第二十一章讨论Ajax），Web应用程序在其生命周期内动态加载信息或功能，已经成为一件司空见惯的事。不过，JavaScript与服务器之间的任何一次通信，都有可能会产生错误。</div><div><span style="color: rgb(235, 0, 115);">第一种通信错误</span>与格式不正确的URL或发送的数据有关。最常见的问题是在将数据发送给服务器之前，没有使用encodeURIComponent（）对数据进行编码。例如，下面这个URL的格式就是不正确的：</div><div><img src="第十七章 错误处理与调试_files/Image [7].png" type="image/png" data-filename="" style="height: auto;"></div><div>针对“redir=”后面的所有字符串调用encodeURIComponent（）就可以解决这个问题，结果将产生如下字符串：</div><div><img src="第十七章 错误处理与调试_files/Image [8].png" type="image/png" data-filename="" style="height: auto;"></div><div><br></div><div>对于查询字符串，应该记住必须要使用<span style="color: rgb(235, 0, 115);">encodeURIComponent（）方法</span>。为了确保这一点，有时候可以定义一个处理<span style="color: rgb(235, 0, 115);">查询字符串</span>的函数，例如：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>function addQueryStringArg(url,name,value){</div><div>    if (url.indexOf(&quot;?&quot;) == -1) {</div><div>        url += &quot;?&quot;;</div><div>    } else {</div><div>        url += &quot;&amp;&quot;;</div><div>    }</div><div><br></div><div>    url += encodeURIComponent(name) + &quot;=&quot; + encodeURIComponent(value);</div><div>    return url;</div><div>}</div></div><div>这个函数接收三个参数：要追加查询字符串的URL，参数名和参数值。如果传入的URL不包含问号，还要给它添加问号；否则，就要添加一个和号，因为有问号就意味着有其他差un字符串。然后，再将经过编码的查询字符串的名和值添加到URL后面，可以像下面这样使用这个函数：</div><div style="box-sizing: border-box; padding: 8px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902);"><div><span style="color: rgb(51, 51, 51);"><span style="font-size: 12px;"><span style="font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;">var url = &quot;<a href="http://www.somedomain.com&amp;quot" target="_blank" rel="external">http://www.somedomain.com&amp;quot</a>;;</span></span></span></div><div><span style="color: rgb(51, 51, 51);"><span style="font-size: 12px;"><span style="font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;">var newUrl = addQueryStringArg(url,&quot;redir&quot;,&quot;<a href="http://www.someotherdomain.com?a=b&amp;c=d&amp;quot" target="_blank" rel="external">http://www.someotherdomain.com?a=b&amp;c=d&amp;quot</a>;);</span></span></span></div><div><span style="color: rgb(51, 51, 51);"><span style="font-size: 12px;"><span style="font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;">console.log(newUrl);</span></span></span></div><div><span style="color: rgb(51, 51, 51);"><span style="font-size: 12px;"><span style="font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;">//</span></span></span><a href="http://www.somedomain.com/?redir=http%3A%2F%2Fwww.someotherdomain.com%3Fa%3Db%26c%3Dd" target="_blank" rel="external">http://www.somedomain.com?redir=http%3A%2F%2Fwww.someotherdomain.com%3Fa%3Db%26c%3Dd</a></div></div><div>原来查询字符串后面可以有一个网址，以为像PHP书上一样只有<span style="color: rgb(118, 0, 216);">？age=18?page=1</span>这种。</div><div><br></div><div>使用这个函数而不是手工构建URL，可以确保编码正确并避免相关错误。</div><div><br></div><div>另外，<span style="color: rgb(235, 0, 115);">第二种通信错误</span>：在服务器相应的数据不正确时，也会发生通信错误。第十章曾经讨论过动态加载脚本和动态加载样式，运用这两种技术都有可能遇到资源都不可用的情况。在没有返回相应资源的情况下，Firefox、Chrome和Safari会默默地失败，IE和Opera则都会报错。然而，对于使用这两种技术产生的错误，很难判断和处理。在某种情况下，使用Ajax通信可以提供有关错误状态的更多信息。</div><div><br></div><div><b>17.2.6区分致命错误和非致命错误</b></div><div>任何错误处理策略中最重要的一个部分，就是确定错误是否致命。对于<span style="color: rgb(235, 0, 115);">非致命错误</span>，可以根据下列一或多个条件来确定：</div><div><b>·</b>不影响用户的主要任务；</div><div><b>·</b>只影响页面的一部分；</div><div><b>·</b>可以恢复；</div><div><b>·</b>重复相同操作可以消除错误。</div><div><br></div><div><span style="color: rgb(235, 0, 115);">致命错误</span>，可以通过以下一或多个条件来确定：</div><div><b>·</b>应用程序根本无法继续运行；</div><div><b>·</b>错误明显影响到了用户的主要操作；</div><div><b>·</b>会导致其他连带错误。</div><div>要想采取适当的措施，必须要知道JavaScript在什么情况下会发生致命错误。在发生致命错误时，应该立即给用户发送一条消息，告诉他们无法再继续手头的事情了。加入必须刷新页面才能让应用程序正常运行，就必须通知用户，同时给用户提供一个点击即可刷新页面的按钮。</div><div><br></div><div>区分非致命错误和致命错误的主要依据，就是看它们对用户的影响。设计良好的代码，可以做到应用程序某一部分发生错误不会不必要地影响另一个实例上毫不相干的部分。例如，My Yahoo!的个性化主页上包含了很多互不依赖的模块。如果每个模块都需要通过JavaScript调用来初始话，那么你可能会看到类似下面这样的代码：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>for(var i=0, len=mods.length; i&lt;len; i++){</div><div>     mods[i].init();          //可能导致致命错误</div><div>}</div></div><div>表面上看，这些代码没什么问题，一次对每个模块调用init（）方法。问题在于，任何模块的init（）方法如果出错，都会导致数组中后续的所有模块无法再进行初始化。从逻辑上说，这样编写代码没有什么意义。毕竟，每个模块相互之间没有依赖关系，实现各自不同功能。可能会导致致命错误的原因是代码的结构。不过，经过下面这样修改，就可以把所有模块的错误变成非致命的：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>for(var i=0, len=mods.length; i&lt;len; i++){</div><div>    try{</div><div>        mods[i].init();          //其中一个初始化失败，进入catch块，不影响继续执行</div><div>    } catch (ex) {</div><div>        //在这里处理错误</div><div>    }       </div><div>}</div></div><div><br></div><div><b>17.2.7把错误记录到服务器</b></div><div>开发Web应用程序过程中的一种常见的做法，就是集中保存错误日志，以便查找重要错误的原因。</div><div><br></div><div>例如数据库和服务器错误都会定期写入日记，而且会按照常用API进行分类。在复杂的Web应用程序中，我们同样推荐你把JavaScript错误也回写到服务器。换句话说，也要将这些错误写入到保存服务器端错误的地方，只不过要标明它们来自前端。把前后端的错误集中起来，能够极大地方便对数据的分析。</div><div><br></div><div>要建立这样一种JavaScript错误记录系统，首先需要在服务器上创建一个页面（或者一个服务器入口点），用于处理错误数据。这个页面的作用无非就是从查询字符串中取得数据，然后再将数据写入错误日志中。这个页面可能会使用如下所示的函数：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>function logError(sev,msg){</div><div>     var img = new Image();</div><div>     img.src = &quot;log.php?sev=&quot; + encodeURIComponent(sev) + &quot;&amp;msg=&quot; + encodeURIComponent(msg);</div><div>}</div></div><div>这个logError（）函数接收两个参数：表示严重程度的数值或字符串（视所用系统而异）及错误消息。其中，使用了Image对象来发送请求，这样做非常灵活，主要表现如下几方面：</div><div>·所有浏览器都支持Image对象，包括那些不支持XMLHttpRequest对象的浏览器。</div><div>·可以避免<span style="color: rgb(235, 0, 115);">跨域限制</span>。通常都是一台服务i期要负责处理多台服务器的错误，而这种情况下使用XMLHttpRequest是不行的。</div><div>·在记录错误的过程中出问题的概率比较低。大多数Ajax通信都是由JavaScript库提供的包装函数来处理的，如果库代码本身有问题，而你还在依赖该库记录错误，可想而知，错误消息是不可能得到记录的。</div><div><br></div><div>只要是使用try-catch语句，就应该把错误记录到日志中。例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>for(var i=0, len=mods.length; i&lt;len; i++){</div><div>    try{</div><div>        mods[i].init();</div><div>    } catch (ex) {</div><div>        logError(&quot;nonfatal&quot;,&quot;Module init failed:&quot; + ex.message);</div><div>    }       </div><div>}</div></div><div>在这里，一旦模块初始化失败，就会调用logError（）。第一个参数是“nonfatal”（非致命），表示错误的严重程度。第二个参数是上下文信息加上真正的JavaScript错误消息。记录到服务器中的错误消息应该尽可能多地带有上下文信息，以便鉴别导致错误的真正原因。</div><div><br></div><div><span style="font-size: 15px;"><b>17.3调试技术</b></span></div><div><br></div><div><b>17.3.1将消息记录到控制台</b></div><div>教我们在控制台使用<span style="color: rgb(235, 0, 115);">concole对象</span>（console是个对象！）这个对象具有下列方法：</div><div><b>·</b>error（message）：将错误消息记录到控制台</div><div><b>·</b>info（message）：将信息性消息记录到控制台</div><div><b>·</b>log（message）：将一般消息记录到控制台</div><div><b>·</b>warn（message）：将警告消息记录到控制台</div><div>后面就是教你怎么向控制台写入消息。</div><div><br></div><div><b>17.3.2将消息记录到当前页面</b></div><div>另一种输出调试消息的方式，就是在页面中开辟一小块区域，用以显示消息。这个区域通常是一个元素，而该元素可以总是出现在页面中，但仅用于调试目的；也可以是一个需要动态创建的元素。例子：</div><div><img src="第十七章 错误处理与调试_files/Image [9].png" type="image/png" data-filename="" style="height: auto;"></div><div><br></div><div>代码先检测是否已经存在调试元素，如果没有则会新创建一个&lt;div&gt;元素， 并为该元素应用一些样式，以便与页面中的其他元素区别开。然后，又使用innerHTML将消息写入到这个&lt;div&gt;元素中。结果就是页面中会有一小块区域显示错误消息。这种技术在不止JavaScript控制台的IE7及更早版本或其他浏览器十分有用。</div><div><br></div><div><b>17.3.3抛出错误</b></div><div><img src="第十七章 错误处理与调试_files/Image [10].png" type="image/png" data-filename="" style="height: auto;"></div><div>在此，如果有一个参数不是数值，就会抛出错误。错误消息中包含了函数的名字，以及导致错误的真正原因。浏览器只要报告了这个错误的消息，我们就可以立即知道错误来源及问题的性质。相对来说，这种具体的错误消息要比那些泛泛的浏览器错误消息更有用。</div><div><br></div><div>对于大型应用程序来说，自定义的错误通常都使用<span style="color: rgb(235, 0, 115);">assert（）函数</span>抛出。这个函数接收两个参数，一个是求值结果应该改为true的条件，另一个是条件为false时要抛出的错误。以下就是一个非常基本的assert（）函数：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>function assert(condition,message){</div><div>     if(!condition){</div><div>          throw new Error(message);</div><div>     }</div><div>}</div></div><div>可以用这个assert（）函数代替某些函数中需要调试的if语句，以便输出错误消息。下面是使用这个函数的例子：</div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>function divide(num1,num2){</div><div>     assert(typeof num1 == &quot;number&quot; &amp;&amp; typeof num2 == &quot;number&quot;,&quot;divide():Both arguments must be numbers&quot;);</div><div>     return num1/num2;</div><div>}</div></div><div>可见，使用assert（）函数可以减少抛出错误所需的代码量，而且也比前面的代码更容易看懂。</div><div><br></div><div><b>17.4常见的IE错误</b></div><div>居然为了IE开了一小节还贼长。真的不想看啊。需要再来。</div></span><br></div>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,313 +230,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章 错误处理与调试/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/10/《JavaScript高级程序设计》-第十六章-HTML5脚本编程/" class="archive-article-date">
-  	<time datetime="2017-12-10T02:54:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-10</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/10/《JavaScript高级程序设计》-第十六章-HTML5脚本编程/">《JavaScript高级程序设计》 第十六章 HTML5脚本编程</a>
-    </h1>
+  
+    <a href="/2017/12/10/《JavaScript高级程序设计》-第十六章-HTML5脚本编程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《JavaScript高级程序设计》 第十六章 HTML5脚本编程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="《JavaScript高级程序设计》-第十七章 错误处理与调试" data-title="《JavaScript高级程序设计》 错误处理与调试" data-url="https://millionqw.github.io/2017/12/10/《JavaScript高级程序设计》-第十七章 错误处理与调试/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/10/《JavaScript高级程序设计》-第十五章-使用Canvas绘图/" class="archive-article-date">
-  	<time datetime="2017-12-10T02:53:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/10/《JavaScript高级程序设计》-第十五章-使用Canvas绘图/">《JavaScript高级程序设计》 第十五章 使用Canvas绘图</a>
-    </h1>
+  <div id="SOHUCS" sid="《JavaScript高级程序设计》-第十七章 错误处理与调试" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "true"; 
+var conf = "true"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/05/《JavaScript高级程序设计》第十四章-表单脚本/" class="archive-article-date">
-  	<time datetime="2017-12-05T13:07:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/05/《JavaScript高级程序设计》第十四章-表单脚本/">《JavaScript高级程序设计》第十四章 表单脚本</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/05/《JavaScript高级程序设计》第十三章-事件/" class="archive-article-date">
-  	<time datetime="2017-12-05T13:03:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/05/《JavaScript高级程序设计》第十三章-事件/">《JavaScript高级程序设计》第十三章 事件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/05/第十二章-DOM2和DOM3/" class="archive-article-date">
-  	<time datetime="2017-12-05T12:56:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/05/第十二章-DOM2和DOM3/">第十二章 DOM2和DOM3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/05/《JavaScript高级程序设计》-第11章-DOM扩展/" class="archive-article-date">
-  	<time datetime="2017-12-05T12:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/05/《JavaScript高级程序设计》-第11章-DOM扩展/">《JavaScript高级程序设计》 第11章 DOM扩展</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/05/《JavaScript高级程序设计》-第十章DOM/" class="archive-article-date">
-  	<time datetime="2017-12-05T12:37:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/05/《JavaScript高级程序设计》-第十章DOM/">《JavaScript高级程序设计》 第十章DOM</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">高程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -523,8 +364,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
